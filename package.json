@@ -1,0 +1,18 @@
+{
+  "name": "cryptos-js",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Handwritten JavaScript cryptographic reference implementations by Yukihiro Asami",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "check:imports": "node scripts/check-imports.mjs",
+    "test:reference": "node scripts/run-reference-tests.mjs",
+    "test:interop": "node --test tests/interop.test.mjs",
+    "test": "npm run check:imports && npm run test:reference && npm run test:regression && npm run test:interop",
+    "test:regression": "node --test tests/point-decoding.test.mjs"
+  }
+}

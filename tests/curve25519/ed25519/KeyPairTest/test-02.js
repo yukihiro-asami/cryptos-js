@@ -1,0 +1,57 @@
+import { keyPair } from '../../../../src/curve25519/ed25519/key-pair.js';
+import { equal } from 'assert';
+
+function testKeyPair(seedHex, expectedPkHex, label) {
+    const seed = Uint8Array.from(Buffer.from(seedHex, 'hex'));
+    const expectedPk = Uint8Array.from(Buffer.from(expectedPkHex, 'hex'));
+
+    const pk = new Uint8Array(32);
+    const sk = new Uint8Array(64);
+
+    keyPair(pk, sk, seed);
+
+    for (let i = 0; i < 32; i++) {
+        equal(pk[i], expectedPk[i], `${label}: pk mismatch at byte ${i}`);
+        equal(sk[i], seed[i], `${label}: sk[${i}] != seed[${i}]`);
+        equal(sk[i + 32], pk[i], `${label}: sk[${i+32}] != pk[${i}]`);
+    }
+
+    console.log(`${label}: passed`);
+}
+
+// === TEST 1 === RFC 8032 7.1
+testKeyPair(
+    '9d61b19deffd5a60ba844af492ec2cc44449c5697b326919703bac031cae7f60',
+    'd75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a',
+    'TEST 1'
+);
+
+// === TEST 2 ===
+testKeyPair(
+    '4ccd089b28ff96da9db6c346ec114e0f5b8a319f35aba624da8cf6ed4fb8a6fb',
+    '3d4017c3e843895a92b70aa74d1b7ebc9c982ccf2ec4968cc0cd55f12af4660c',
+    'TEST 2'
+);
+
+// === TEST 3 ===
+testKeyPair(
+    'c5aa8df43f9f837bedb7442f31dcb7b166d38535076f094b85ce3a2e0b4458f7',
+    'fc51cd8e6218a1a38da47ed00230f0580816ed13ba3303ac5deb911548908025',
+    'TEST 3'
+);
+
+// === TEST 1024 ===
+testKeyPair(
+    'f5e5767cf153319517630f226876b86c8160cc583bc013744c6bf255f5cc0ee5',
+    '278117fc144c72340f67d0f2316e8386ceffbf2b2428c9c51fef7c597f1d426e',
+    'TEST 1024'
+);
+
+// === TEST SHA(abc) ===
+testKeyPair(
+    '833fe62409237b9d62ec77587520911e9a759cec1d19755b7da901b96dca3d42',
+    'ec172b93ad5e563bf4932c70e1245034c35467ef2efd4d64ebf819683467e2bf',
+    'TEST SHA(abc)'
+);
+
+console.log('All tests passed.');

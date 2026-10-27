@@ -1,0 +1,2000 @@
+{
+  "sourceRepository": "rainfrog_truth",
+  "sourceCommit": "a5791f1c0acd607f34acf744967b9f50fa92a8fb",
+  "date": "2026-10-27",
+  "sourceState": "working tree; selected bytes recorded by SHA-256; unrelated uncommitted changes left untouched",
+  "entrypoints": [
+    "src/curve25519/ed25519/key-pair.js",
+    "src/curve25519/ed25519/sign-detached.js",
+    "src/curve25519/ed25519/verify-detached.js",
+    "src/curve25519/x25519/scalarmult-curve25519.js",
+    "src/curve25519/x25519/scalarmult-curve25519-base.js",
+    "src/crypto/sha512/sha512.js",
+    "src/crypto/sha512/hkdf-sha512-extract.js",
+    "src/crypto/sha512/hkdf-sha512-expand.js",
+    "src/crypto/chacha20poly1305/chacha20poly1305-encrypt.js",
+    "src/crypto/chacha20poly1305/chacha20poly1305-decrypt.js"
+  ],
+  "files": [
+    {
+      "path": "src/crypto/chacha20poly1305/calc-quarter-round.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/calc-quarter-round.js",
+      "sha256": "e687c360b6a26d1cea75d18f03bf5c538c7767e56837717d84dc581c79dbd62e",
+      "bytes": 361
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha-ctx.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha-ctx.js",
+      "sha256": "9140fb19bf4685bc5d64c52ea6e28f6684c36cd3af15613bd7fbde1f872dbeac",
+      "bytes": 86
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha-iv-set-up.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha-iv-set-up.js",
+      "sha256": "9a0f8cec308783826876a1384df3c7fd8eeeb495953618bb2f7709541d02f085",
+      "bytes": 283
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha-key-set-up.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha-key-set-up.js",
+      "sha256": "9599a15a836bf4e7ff48530c642ef510f0ee0119edf9647df1ecbf5eb09b60f7",
+      "bytes": 543
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha20-encrypt-bytes.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha20-encrypt-bytes.js",
+      "sha256": "00c52f17f80427b0890b785c6b1f2cda21e9b4a380ea326c417e086b31128e37",
+      "bytes": 2020
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha20-xor-ic.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha20-xor-ic.js",
+      "sha256": "45ff4cfd2efd6b3236a281f036de7c1e3ef357342f1922054e3ab299cd90930a",
+      "bytes": 561
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha20poly1305-decrypt-detached.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha20poly1305-decrypt-detached.js",
+      "sha256": "454d8b8ea2a0c52ea7bafd2c3a88ad9f184bcba72eb3b16895ebb067b135ccb6",
+      "bytes": 1413
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha20poly1305-decrypt.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha20poly1305-decrypt.js",
+      "sha256": "c343e4cee4e35221e881ff841b3c0a5abde5932d4eccde14d5df4ef226a84c75",
+      "bytes": 416
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha20poly1305-encrypt-detached.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha20poly1305-encrypt-detached.js",
+      "sha256": "1ae42fb26e6f1a7da23044269d61a49f3b4e0a6515667a3fec23920d174e5359",
+      "bytes": 1385
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/chacha20poly1305-encrypt.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/chacha20poly1305-encrypt.js",
+      "sha256": "94c767089d2b4a4a3293be9426b7d5eba809006273745f96d5e3a32f8e0f62ea",
+      "bytes": 389
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/cramp-r.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/cramp-r.js",
+      "sha256": "e02f5e5a11580a59b158695c2a90ba910ea09303bc370976384f42bae2a62a30",
+      "bytes": 86
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/poly1305-blocks.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/poly1305-blocks.js",
+      "sha256": "a92375247007dbab94f0da30593ef397a105b2807e34b980b5e1483154f730e0",
+      "bytes": 485
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/poly1305-finish.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/poly1305-finish.js",
+      "sha256": "ae48d5bff308e898bc4e220eda063b968f59e94302d2e2f3de23eab7a0e66e19",
+      "bytes": 531
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/poly1305-init.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/poly1305-init.js",
+      "sha256": "0e57d0e3a46e6d196fa0b9f31668c32a43e3ca7b0890f0efef8d6cfc1a7cb2be",
+      "bytes": 225
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/poly1305-state.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/poly1305-state.js",
+      "sha256": "b6d5a305ad9a0d935ff91e9c5576e977afca5a07bfcaa29cda8298ea2073cd31",
+      "bytes": 177
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/poly1305-update.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/poly1305-update.js",
+      "sha256": "da5a9ec5127edbc3f2c5d4a3dbc62a2395a9fe1a665a54a215056289ec242693",
+      "bytes": 1155
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/to-uint128-le.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/to-uint128-le.js",
+      "sha256": "dfa7bb2e8e566339d23e44803400be226bad6f61a415ad1c940efffa99907146",
+      "bytes": 188
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/to-uint32-le.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/to-uint32-le.js",
+      "sha256": "e01e64c072d00a3a8d0eb73e0ede487d312d39a50313a86d60e3ef4fb3e829c1",
+      "bytes": 176
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/to-uint8-array128-le.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/to-uint8-array128-le.js",
+      "sha256": "e7284fd229dea60e2dee381ea5057162820da100ba2fa80d40ee420cad91f0a7",
+      "bytes": 149
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/to-uint8-array32-le.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/to-uint8-array32-le.js",
+      "sha256": "7079dfb26df6cc72cb7facb107d164e5476fa3e2d1f1b024e2962e33df22f5ee",
+      "bytes": 229
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/to-uint8-array64-le.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/to-uint8-array64-le.js",
+      "sha256": "bc8be3e07c6b23071a92775472ad99b746baf264bf276daa02019791534bcdb5",
+      "bytes": 398
+    },
+    {
+      "path": "src/crypto/chacha20poly1305/word32-rotate.js",
+      "sourcePath": "frog/worker/src/crypto/chacha20poly1305/word32-rotate.js",
+      "sha256": "df62b6d749dcf53c615ab660007343955963572ac713a307ad1cbd0a6b2dbb4d",
+      "bytes": 87
+    },
+    {
+      "path": "src/crypto/const.js",
+      "sourcePath": "frog/worker/src/crypto/const.js",
+      "sha256": "f2252256f388d5e8f7791e6dcbe722c31dda92acab5989836cddf23dad918a0a",
+      "bytes": 2392
+    },
+    {
+      "path": "src/crypto/sha512/calc-ch.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-ch.js",
+      "sha256": "63f8665ad751d0c0feb7bfbfa68e325ab7baae3bb4256dcefdf443f3eb33f089",
+      "bytes": 65
+    },
+    {
+      "path": "src/crypto/sha512/calc-maj.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-maj.js",
+      "sha256": "e4711c6fafebf5b276152cd1f7220cde85eea6f38c6dbbe8324265d5fde100a0",
+      "bytes": 73
+    },
+    {
+      "path": "src/crypto/sha512/calc-msch.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-msch.js",
+      "sha256": "b37aed0b042ffcfeb2d2b697491bdfa5f0574ffbd9f239e9a32e6855a7aec43e",
+      "bytes": 427
+    },
+    {
+      "path": "src/crypto/sha512/calc-rnd.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-rnd.js",
+      "sha256": "76b28c249768c4a93fe25c691d3c1a55356dc2b161ecfdf45aa19a86f3bad929",
+      "bytes": 612
+    },
+    {
+      "path": "src/crypto/sha512/calc-rndr.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-rndr.js",
+      "sha256": "de391c0bc71d5a4832b89fec7166b4b173e3447a7350f5d9848b1c7e169e5f3d",
+      "bytes": 448
+    },
+    {
+      "path": "src/crypto/sha512/calc-sl0.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-sl0.js",
+      "sha256": "1d0d1211106b88998496a066af2cd369ee58546839ce6e84c438401c9498d7ec",
+      "bytes": 341
+    },
+    {
+      "path": "src/crypto/sha512/calc-sl1.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-sl1.js",
+      "sha256": "24ac6fa7e91ebe96e13570f23aa273027934a9873fe781ba27095238cf1a25d0",
+      "bytes": 332
+    },
+    {
+      "path": "src/crypto/sha512/calc-su0.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-su0.js",
+      "sha256": "b340172eb93518930e42fec8b91d467316138535b4025921f0178aecb5af3746",
+      "bytes": 285
+    },
+    {
+      "path": "src/crypto/sha512/calc-su1.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/calc-su1.js",
+      "sha256": "817516425e819019f9839fb9d6cf0ad813c49709ff1dc36737088b8aa4fc4537",
+      "bytes": 287
+    },
+    {
+      "path": "src/crypto/sha512/hkdf-sha512-expand.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/hkdf-sha512-expand.js",
+      "sha256": "0be15da8ed402e21f736f3eb3be3ee1c5b5a4e2301c8e1bbe5b8500b272834d0",
+      "bytes": 1091
+    },
+    {
+      "path": "src/crypto/sha512/hkdf-sha512-extract.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/hkdf-sha512-extract.js",
+      "sha256": "d9d1d3b0c1e803846eea14a6394579f07b54641b787d0d4237e98afa61ad03f2",
+      "bytes": 428
+    },
+    {
+      "path": "src/crypto/sha512/hmac-sha512-finish.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/hmac-sha512-finish.js",
+      "sha256": "a57f9ad62748109495cd1bc126711dadcb94454aa3bc9f7183288fec813098ba",
+      "bytes": 312
+    },
+    {
+      "path": "src/crypto/sha512/hmac-sha512-init.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/hmac-sha512-init.js",
+      "sha256": "db4c515cfbe893e5027123d274c22541b243e8ccfd97bd61f6def275ed78b17e",
+      "bytes": 993
+    },
+    {
+      "path": "src/crypto/sha512/hmac-sha512-state.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/hmac-sha512-state.js",
+      "sha256": "73aa46de444c31deb9c0182018cd5acd74fbcb3aed70898396eae5a0dd861ebd",
+      "bytes": 165
+    },
+    {
+      "path": "src/crypto/sha512/hmac-sha512-update.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/hmac-sha512-update.js",
+      "sha256": "4986915ccfcda957b6825ef3c0dd48c5fc9777b9803606b9fb0bee97c39d85e6",
+      "bytes": 139
+    },
+    {
+      "path": "src/crypto/sha512/sha512-final.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/sha512-final.js",
+      "sha256": "43fff7c8eaaee9cf52db8a6324c61ad4e58bbc61f6eb38396f0aa7498b976528",
+      "bytes": 607
+    },
+    {
+      "path": "src/crypto/sha512/sha512-init.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/sha512-init.js",
+      "sha256": "09e7d669bb5e54551e03a5d27ee83b56f366a6b66911781887f2789e9b3445fc",
+      "bytes": 171
+    },
+    {
+      "path": "src/crypto/sha512/sha512-pad.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/sha512-pad.js",
+      "sha256": "5467884cc8169ebcafb4595170ba51489738c13c0e71834e4a9302c42969593e",
+      "bytes": 639
+    },
+    {
+      "path": "src/crypto/sha512/sha512-state.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/sha512-state.js",
+      "sha256": "5aebe8520fd6c83314e6e1c9f1332403090f4f699bba448c7a0d179bd09cba49",
+      "bytes": 309
+    },
+    {
+      "path": "src/crypto/sha512/sha512-transform.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/sha512-transform.js",
+      "sha256": "29b9ef99db1e2866b6e68249549aa8af596aaf311d5728e0e97c0d74c7dd14cc",
+      "bytes": 1618
+    },
+    {
+      "path": "src/crypto/sha512/sha512-update.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/sha512-update.js",
+      "sha256": "96d392aef408e37c01bb3311ee69846a4831dc5888241647c288aaa47473dbf5",
+      "bytes": 1150
+    },
+    {
+      "path": "src/crypto/sha512/sha512.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/sha512.js",
+      "sha256": "b74915c6cfcd6cba881006e98c6d14a0f2389194f1830c12eaeec972d9073138",
+      "bytes": 359
+    },
+    {
+      "path": "src/crypto/sha512/to-uint64-array-1024-be.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/to-uint64-array-1024-be.js",
+      "sha256": "7b2ddccf2eee9e84da134c17c43e56bc04ef055a506452b380ad8bff234774c5",
+      "bytes": 704
+    },
+    {
+      "path": "src/crypto/sha512/to-uint8-array-128-be.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/to-uint8-array-128-be.js",
+      "sha256": "8fe2181b6748867fd087cd36af0ad75b3a353b764ae962d8789a8b73145b3c24",
+      "bytes": 314
+    },
+    {
+      "path": "src/crypto/sha512/to-uint8-array-512-be.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/to-uint8-array-512-be.js",
+      "sha256": "eb7e3e318c54889dd45c0588af5513746b7c338782ec2d7577fbe0f2a5d22611",
+      "bytes": 539
+    },
+    {
+      "path": "src/crypto/sha512/word64-add.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/word64-add.js",
+      "sha256": "2d7f27b39019d92db54d8cad6c597eefa088b162c19f719b9fa48cc9de5b05e9",
+      "bytes": 119
+    },
+    {
+      "path": "src/crypto/sha512/word64-rotate.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/word64-rotate.js",
+      "sha256": "93c9dba84ce14a72b61bd432bd10e412d471ae3b832975f136d782037315c123",
+      "bytes": 216
+    },
+    {
+      "path": "src/crypto/sha512/word64-shift.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/word64-shift.js",
+      "sha256": "d99f51f71f4f4eeddd796da8304f1e622eb7ba7d5645c232649e9f11fbb227c7",
+      "bytes": 65
+    },
+    {
+      "path": "src/crypto/sha512/word64-xor.js",
+      "sourcePath": "frog/worker/src/crypto/sha512/word64-xor.js",
+      "sha256": "cab6b5aba7802f4526ead61274e956519ebb4ab71a6e036d35e6340f1598b30f",
+      "bytes": 53
+    },
+    {
+      "path": "src/curve25519/const.js",
+      "sourcePath": "frog/worker/src/curve25519/const.js",
+      "sha256": "e8e9d33d47526acba96fa0e5dd4a90af07ea1b528525843abb9ec755f295902b",
+      "bytes": 96179
+    },
+    {
+      "path": "src/curve25519/ed25519/clamp.js",
+      "sourcePath": "frog/worker/src/curve25519/ed25519/clamp.js",
+      "sha256": "c43b329d7f382bc7aa63fb318ae0d8986b8b96f39134d68fd6835ef51bcfb1d5",
+      "bytes": 80
+    },
+    {
+      "path": "src/curve25519/ed25519/double-scalarmult-vartime.js",
+      "sourcePath": "frog/worker/src/curve25519/ed25519/double-scalarmult-vartime.js",
+      "sha256": "69e7876bfa271811ce35afc35b84e8d8467a9361b884125339aea7954997048a",
+      "bytes": 2570
+    },
+    {
+      "path": "src/curve25519/ed25519/key-pair.js",
+      "sourcePath": "frog/worker/src/curve25519/ed25519/key-pair.js",
+      "sha256": "5d127293393477c719037bf3a020f7f0b786b559d300d751ed9f945e3972a48e",
+      "bytes": 885
+    },
+    {
+      "path": "src/curve25519/ed25519/sign-detached.js",
+      "sourcePath": "frog/worker/src/curve25519/ed25519/sign-detached.js",
+      "sha256": "ae05b5429024ccb4d94463274d22d9b3d3ea7d49392a0dee7c96e2c2f1f00062",
+      "bytes": 2128
+    },
+    {
+      "path": "src/curve25519/ed25519/slide-vartime.js",
+      "sourcePath": "frog/worker/src/curve25519/ed25519/slide-vartime.js",
+      "sha256": "c3e13c6b39c0f83c71e267f72ce2369408e10f3ae14e248a282774f25cbd8034",
+      "bytes": 960
+    },
+    {
+      "path": "src/curve25519/ed25519/verify-detached.js",
+      "sourcePath": "frog/worker/src/curve25519/ed25519/verify-detached.js",
+      "sha256": "35a8bc9e03ea2c9c77f954146cc8560d6b7ed1081a811840cd762e11d287831c",
+      "bytes": 2838
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-add.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-add.js",
+      "sha256": "97819e6e80c9c09bfce7f67a3a377796ccd4fdc7251ce8b98dd48a06e93fc37e",
+      "bytes": 195
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-cmov.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-cmov.js",
+      "sha256": "ef5ffe2151d59ce5a5848a0f760c6b0db2c953ce96e193999edb076825a4e954",
+      "bytes": 152
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-copy.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-copy.js",
+      "sha256": "e98740765546f90a3727078c550c5b8b6971f95c2bab01d3ec5e9e88a7e6a07f",
+      "bytes": 60
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-cswap.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-cswap.js",
+      "sha256": "d9d284ef0179e9a2ed0c5f540190e4bacc32d709abca774c844190f2a3b741c4",
+      "bytes": 166
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-from-bytes.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-from-bytes.js",
+      "sha256": "fb44ce51c838f8fba0e29257f3760552b61457d6ceaed9389459ddaf13aa14ff",
+      "bytes": 268
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-invert.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-invert.js",
+      "sha256": "148137c3feb9ce71a025ee19394271147c510e2752c7dc8589e45f844da4a01e",
+      "bytes": 1517
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-is-negative.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-is-negative.js",
+      "sha256": "d5ca8a4f747c11da1ef78f2305b002cfd15503f489fba729d022bb93ed7d33a3",
+      "bytes": 175
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-is-zero.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-is-zero.js",
+      "sha256": "000266db219f4153112bc96763f9c599da825452bbbc42b9cd3e988f27354b0d",
+      "bytes": 325
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-mul.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-mul.js",
+      "sha256": "0772dfbf85aefd85e749cf937756b151e0a91ea26f38fdab1891e4391a6bbc25",
+      "bytes": 197
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-neg.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-neg.js",
+      "sha256": "9dadbdf1d312e081517c8ec672494009aa15cb180aefa1fc9727d90c32fa64cd",
+      "bytes": 247
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-one.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-one.js",
+      "sha256": "b18e4fb6c79bc55e97c87ae79eb7eeea555fb76211ee5a84d34cc2d8c08592fb",
+      "bytes": 51
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-pow22523.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-pow22523.js",
+      "sha256": "014f3b6444a1bbdf55220bd09df7be1c618e8faffd238c5f12f0c93c1857bd7c",
+      "bytes": 1524
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-reduce.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-reduce.js",
+      "sha256": "6ae4d420834e08ca35e52aa8185ddbed84e87eaa2ad40a551b00fd6d63f92455",
+      "bytes": 108
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-sq.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-sq.js",
+      "sha256": "3af82011bdac5d12fafb334f6196f88bd71f9efe80afc922fbc67b91c3bd02a3",
+      "bytes": 307
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-sq2.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-sq2.js",
+      "sha256": "782b643fa7e0f961a6fafc85f4fbc624b623f95a57df7301f55222daee98fc6c",
+      "bytes": 199
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-sub.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-sub.js",
+      "sha256": "515e7ba46563b6f69db163be977775a89024ece88161413e08a1b2a6d1d9c69a",
+      "bytes": 72
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-to-bytes.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-to-bytes.js",
+      "sha256": "5c0b2a010e4e7ec15ac33973167640d170d49fdada0048532c71392f23bd92e2",
+      "bytes": 277
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519-zero.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519-zero.js",
+      "sha256": "e9b70e6088940124843062cff7a6cd32dd667b22b6e60260cdee24c43912a65d",
+      "bytes": 52
+    },
+    {
+      "path": "src/curve25519/fe25519/fe25519.js",
+      "sourcePath": "frog/worker/src/curve25519/fe25519/fe25519.js",
+      "sha256": "641d4943feec003fae55f77268b01f398f9e8e3da4864a27b1db3d6fff7796e4",
+      "bytes": 134
+    },
+    {
+      "path": "src/curve25519/ge25519/equal.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/equal.js",
+      "sha256": "237555462268de904af8558505f93dba459f5f06ba84bb4707076cd167da9236",
+      "bytes": 144
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-add-cached.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-add-cached.js",
+      "sha256": "abb92acdf6f3b1fa696b80dbfe44f2614b808647dde5878636c845e8f340f9e3",
+      "bytes": 1019
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-add-precomp.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-add-precomp.js",
+      "sha256": "4cc94b7ffea1d5401d06c47d7f724deda94e4b99bf34f0a18964da689a521f25",
+      "bytes": 611
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-cached.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-cached.js",
+      "sha256": "3df2afcecd1c7b24b9ff5476ed314d57b19c9ad96e1ea742002ea156ebd2691f",
+      "bytes": 206
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-cmov.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-cmov.js",
+      "sha256": "5b181295305a627f22ba762505a5ee047d48108f59fa4758eaf0782275c5d7bc",
+      "bytes": 589
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-cmov8-base.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-cmov8-base.js",
+      "sha256": "924e65d79585ee36d9bd40f23fb4b51faaab3fa2140fa7756349093aa53aa9a4",
+      "bytes": 236
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-cmov8.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-cmov8.js",
+      "sha256": "04fdba8bd8ca853e4303af8514c46a5170f877a3fa35ffeb5ee7f00cbfd0e3ff",
+      "bytes": 1049
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-from-bytes-negate-vartime.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-from-bytes-negate-vartime.js",
+      "sha256": "2517a6543b708aef2ca83667134e1858a8e76be737f30be7ac9ddb048e3c7d0d",
+      "bytes": 2295
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-from-bytes.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-from-bytes.js",
+      "sha256": "5db35c09a1408a4ae4bcd7c822d1eda45a1983af54d5f1a114e1046bf5fef066",
+      "bytes": 2107
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-has-small-order.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-has-small-order.js",
+      "sha256": "89840d73c72dee075b295db2e0f18d14395691d68e690b815c602d68abdf5f91",
+      "bytes": 987
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-is-canonical.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-is-canonical.js",
+      "sha256": "0c6f442962036acd578dce06bb161b01b219d2f5769ace3035aae048be702b20",
+      "bytes": 367
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p1p1-to-p2.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p1p1-to-p2.js",
+      "sha256": "ee3c809b0b1be9049215e186b70b7a72b62a2c1a0610c21d8921ae5cc269d097",
+      "bytes": 191
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p1p1-to-p3.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p1p1-to-p3.js",
+      "sha256": "532257fa48c4eaddefd66f21f73967b53b7267551e171b060d394b7e8e39e0d0",
+      "bytes": 223
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p1p1.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p1p1.js",
+      "sha256": "a3fdf9b7f7ee577fc87144873f13ac780d64dacae67727ee8d0c3f01a591bcba",
+      "bytes": 191
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p2-dbl.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p2-dbl.js",
+      "sha256": "72e74f88b8bcf12cdc6764e8a7c62b55c21f812ace391bab2306607e30f52008",
+      "bytes": 593
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p2-to-p3.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p2-to-p3.js",
+      "sha256": "968dcdb9f69c676f96642a04517b599ad882465309e42b453d6bd99825466b38",
+      "bytes": 267
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p2-zero.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p2-zero.js",
+      "sha256": "7eb9e7f9ce853421fd613a8906abed530a49bec1429ef6467e8ea1602822d0c7",
+      "bytes": 216
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p2.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p2.js",
+      "sha256": "69fbe11ab6a844640a7f69e94318a5f8f28f65b2405c2f0718569f8f2716b12e",
+      "bytes": 167
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-add.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-add.js",
+      "sha256": "25d480414a9b9a8581044ce46e44ee47b8576bfb22df9300c7fad696e9881857",
+      "bytes": 504
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-dbl.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-dbl.js",
+      "sha256": "281b47b6d8bd5246345d8b034711b24a114e011a387adff61627d9a19a779c19",
+      "bytes": 350
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-mul16.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-mul16.js",
+      "sha256": "cbc9821870915af8e8f84dfc84769164fbbee2c6b081b785643cf6e3e1fc5244",
+      "bytes": 870
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-neg.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-neg.js",
+      "sha256": "b6387930e5a6c5be2a12c813df2da7a5120776e8fb4a3e58b2e43fc09ebf8589",
+      "bytes": 260
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-reduce.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-reduce.js",
+      "sha256": "13cd8eeef381bc4f1e8efe07bd6dbf2a715bd3041a95ff29eebaf23cc196f9ad",
+      "bytes": 197
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-sub.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-sub.js",
+      "sha256": "dae5a7a1ecebd87e099bdf2720ca3913aeb8d080470b17300dd479526379b556",
+      "bytes": 280
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-to-bytes.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-to-bytes.js",
+      "sha256": "666ce86b4cfe030cff17a5709faefcc9436269a1a37779daedd3df2d6cacc12c",
+      "bytes": 588
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-to-cached.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-to-cached.js",
+      "sha256": "7ddebd0fc5c6761cafb70442e0bc57bd5d6c096ed2956663705c0045e1d619dd",
+      "bytes": 465
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-to-p2.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-to-p2.js",
+      "sha256": "1066337ebbde585567a3aa2bdbd7c19f86d387e40dbd3bdf8481b913d5e7d8e5",
+      "bytes": 178
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3-zero.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3-zero.js",
+      "sha256": "1802b38c070b7ebb903412974c1c02e90480067e2813c427a2c7162d73632e88",
+      "bytes": 236
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p3.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-p3.js",
+      "sha256": "bb0e4e6dbb4bac9686fdf194b4606e0b7586e0d4893f0d7cfd071103ce0c2b2a",
+      "bytes": 189
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-precomp-zero.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-precomp-zero.js",
+      "sha256": "2eb0a91055165001950202e098d2f349ec47bc35920aea50fd8c6e58116c054f",
+      "bytes": 234
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-precomp.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-precomp.js",
+      "sha256": "3fe90c6a4b8d232fe88a93aa4cab4a709abe242a0a8fd7fe673839978a4bf351",
+      "bytes": 186
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-scalarmult-base.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-scalarmult-base.js",
+      "sha256": "56bd88dc2512f3b92970af6dbcc687d1bd55e501ac0bb866bb4e785cba2a9306",
+      "bytes": 1145
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-sub-cached.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-sub-cached.js",
+      "sha256": "b8ab2e7acb172dec2e9fdeae8f08fc5eb8299b462a65b486da99337cadf30eb3",
+      "bytes": 1042
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-sub-precomp.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/ge25519-sub-precomp.js",
+      "sha256": "cca198f404ad6da512e4f19b18d6f6282293f2271fae27fcc6a2ec809928a61e",
+      "bytes": 1089
+    },
+    {
+      "path": "src/curve25519/ge25519/scalar-to-radix16.js",
+      "sourcePath": "frog/worker/src/curve25519/ge25519/scalar-to-radix16.js",
+      "sha256": "5b58043b83ffb47c670481e05eafae3f1b2d37a707c29f54e274cc869ad30506",
+      "bytes": 767
+    },
+    {
+      "path": "src/curve25519/sc25519/sc25519-from-bytes.js",
+      "sourcePath": "frog/worker/src/curve25519/sc25519/sc25519-from-bytes.js",
+      "sha256": "bcae091e8b810097f5ae58692a92a87c4d57d34468f7f2c7e65e6f3dea7882b7",
+      "bytes": 215
+    },
+    {
+      "path": "src/curve25519/sc25519/sc25519-is-canonical.js",
+      "sourcePath": "frog/worker/src/curve25519/sc25519/sc25519-is-canonical.js",
+      "sha256": "476bfdbf761fb7ed6bcfd62ccab4b6f2c168d3c6a486af005074e7c1eba7de64",
+      "bytes": 102
+    },
+    {
+      "path": "src/curve25519/sc25519/sc25519-mul-add.js",
+      "sourcePath": "frog/worker/src/curve25519/sc25519/sc25519-mul-add.js",
+      "sha256": "86d9fb7c5bddc74309c8e935e60efc5995cf4feedfcaeba96017828f17f3ab90",
+      "bytes": 249
+    },
+    {
+      "path": "src/curve25519/sc25519/sc25519-reduce.js",
+      "sourcePath": "frog/worker/src/curve25519/sc25519/sc25519-reduce.js",
+      "sha256": "e107b30b9b0f8ac8ce18e0e80880fdc728338cf50750362afa267687b44e3c8c",
+      "bytes": 98
+    },
+    {
+      "path": "src/curve25519/sc25519/sc25519-to-bytes.js",
+      "sourcePath": "frog/worker/src/curve25519/sc25519/sc25519-to-bytes.js",
+      "sha256": "5af463abe6dcfb9fcf6208166443a3d0c740af1903d6472a88ceb788b8d207df",
+      "bytes": 180
+    },
+    {
+      "path": "src/curve25519/sc25519/sc25519.js",
+      "sourcePath": "frog/worker/src/curve25519/sc25519/sc25519.js",
+      "sha256": "198d7977c1b9789a2c4a10ad7f23e17d560239e654bbbb683ed7fbe259eee7a8",
+      "bytes": 127
+    },
+    {
+      "path": "src/curve25519/x25519/edwards-to-montgomery.js",
+      "sourcePath": "frog/worker/src/curve25519/x25519/edwards-to-montgomery.js",
+      "sha256": "c7d66e3ded0369d85e23a4de01fb36a109bec7b2e289a3a16a053708acad84e1",
+      "bytes": 638
+    },
+    {
+      "path": "src/curve25519/x25519/montgomery-ladder.js",
+      "sourcePath": "frog/worker/src/curve25519/x25519/montgomery-ladder.js",
+      "sha256": "a2e2f89e5197b943812f20a6a2dda4c7be2d6df454e1e4cc8ba7622025b05ec0",
+      "bytes": 3379
+    },
+    {
+      "path": "src/curve25519/x25519/scalarmult-curve25519-base.js",
+      "sourcePath": "frog/worker/src/curve25519/x25519/scalarmult-curve25519-base.js",
+      "sha256": "574f4803d5d68b105e214602cc706cb789dffcc72dca6505a7cb2acec25fcb58",
+      "bytes": 786
+    },
+    {
+      "path": "src/curve25519/x25519/scalarmult-curve25519.js",
+      "sourcePath": "frog/worker/src/curve25519/x25519/scalarmult-curve25519.js",
+      "sha256": "52a7a274a3c02c95d94221055a77b9af4e0b1795609fd8fce477f111a5b2544e",
+      "bytes": 512
+    },
+    {
+      "path": "tests/curve25519/BaseRadix2Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/BaseRadix2Test/test-01.js",
+      "sha256": "d0ec16de2d8a3f838c3754fda7938fcf7035bae4e8fb2e1374b424c06f12e6c9",
+      "bytes": 2573
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-2d.js",
+      "sourcePath": "frog/worker/tests/curve25519/ConstTest/test-2d.js",
+      "sha256": "2c700ca527ce3ef089c9f92989a9ef32e93475cceea76d7ae2be5b3cd6bfa575",
+      "bytes": 719
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-d.js",
+      "sourcePath": "frog/worker/tests/curve25519/ConstTest/test-d.js",
+      "sha256": "8dd781933c3f3ccccec720e70bf2ecd714f4c521573c44999f0401f6b22683e5",
+      "bytes": 1196
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-ed25519-y.js",
+      "sourcePath": "frog/worker/tests/curve25519/ConstTest/test-ed25519-y.js",
+      "sha256": "0f1ef6381874c970ccf8b8afb7414dc6d8672aa17a56a6dcb9fdbe0e2c1589e2",
+      "bytes": 924
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-l.js",
+      "sourcePath": "frog/worker/tests/curve25519/ConstTest/test-l.js",
+      "sha256": "e42eb23c64aa17ba33509b200b32a02e7e338891ddfe542c3b10fc9dfd155470",
+      "bytes": 348
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-minus-one.js",
+      "sourcePath": "frog/worker/tests/curve25519/ConstTest/test-minus-one.js",
+      "sha256": "fe75f4b25e43753ece3438958b006706bace8dea85245f78b8348439d7fe0132",
+      "bytes": 453
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-p.js",
+      "sourcePath": "frog/worker/tests/curve25519/ConstTest/test-p.js",
+      "sha256": "dc51dadedfd9fa2a9862a06ad9658f2e8ca7a4755f3e54594548f9d346cc4dd5",
+      "bytes": 329
+    },
+    {
+      "path": "tests/curve25519/ed25519/ClampTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/ClampTest/test-01.js",
+      "sha256": "d9fa062e358fa05c2acb576d4e7577d3d8ad6c86265be2e0b4e1e2f5c7ff15b4",
+      "bytes": 722
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-01.js",
+      "sha256": "92e6b248dc02f31a962be06969385e6e7a3ac208a4d564baa66de78e8fae69e7",
+      "bytes": 1673
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-02.js",
+      "sha256": "e54b25137a8636f3cfae62ea821ee244c8d3f45bd6a3153111c95d0301200847",
+      "bytes": 1628
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-03.js",
+      "sha256": "845c1817bd48d07b031c62b079aa40d31ac11962c3e15f89aae8b477f9990b5e",
+      "bytes": 3500
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-04.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-04.js",
+      "sha256": "709927dcee8fd45c78db154d77fe8d4dcc14bdee676688ae003899757dc3027b",
+      "bytes": 2552
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-05.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-05.js",
+      "sha256": "7bb9177df2cf940a1a9db19d1e7daaef8f66474315187de746975586c7028395",
+      "bytes": 3205
+    },
+    {
+      "path": "tests/curve25519/ed25519/KeyPairTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/KeyPairTest/test-01.js",
+      "sha256": "0486d64820e363c25681a0de58d2b7b7ccc4955964dcae2d3b0e60537fcefe2c",
+      "bytes": 1006
+    },
+    {
+      "path": "tests/curve25519/ed25519/KeyPairTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/KeyPairTest/test-02.js",
+      "sha256": "6b54409cefc9122b60a0e41c359515d21ff6204f2717de097a1fc1d483e56659",
+      "bytes": 1720
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/SignDetachedTest/test-01.js",
+      "sha256": "0a868f9d527ee36397e9bf5f35d05030b61621cffddf5ebc8f3331b496bdf2b3",
+      "bytes": 1509
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/SignDetachedTest/test-02.js",
+      "sha256": "80aa6c2f2a535e68991c71307218297d684fff6d51d517800b6da8ce523ee29e",
+      "bytes": 2444
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/SignDetachedTest/test-03.js",
+      "sha256": "ff90d149bc806eaa0b647dc84b0acd9159f5521b96711db570f10f5de153f7d8",
+      "bytes": 2023
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-04.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/SignDetachedTest/test-04.js",
+      "sha256": "80d95ac250dc0647e359f053aff512f6c4452928b27b1b5413e93d328a32d59b",
+      "bytes": 4043
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-05.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/SignDetachedTest/test-05.js",
+      "sha256": "a424677f48c1cf6dab39c657c0d6652e322abeb453574849baf9ef4b9fda3733",
+      "bytes": 1460
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-06.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/SignDetachedTest/test-06.js",
+      "sha256": "1bd29a930de98af5f6536a67bfefde0b77fac341635b423a3e000c0c11e41ce7",
+      "bytes": 1864
+    },
+    {
+      "path": "tests/curve25519/ed25519/SlideVartimeTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/SlideVartimeTest/test-01.js",
+      "sha256": "b073275a7084f9ed027ded731ea5fdd1312bd9c8c397a170e4a620b1b9e14a27",
+      "bytes": 2204
+    },
+    {
+      "path": "tests/curve25519/ed25519/SlideVartimeTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/SlideVartimeTest/test-02.js",
+      "sha256": "7da6827cb668ae36dd07a8843590c2f9eab27f5b9dd8cb768a57da648fa3c118",
+      "bytes": 2517
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/VerifyDetachedTest/test-01.js",
+      "sha256": "797e631ca7b43a70fcfeca1ee4bb21d971022333c29f9fb27ae4e7c0f6cf1eac",
+      "bytes": 1196
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/VerifyDetachedTest/test-02.js",
+      "sha256": "fe192f44140189f8e3e239a360bdd88bfee1ad911958c959b60cd6b9b2ec3454",
+      "bytes": 1189
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/VerifyDetachedTest/test-03.js",
+      "sha256": "ca4e9ae2e7824347c33bf2b26f4fc63717c97d60e652a9cf60e2b25be8d05f13",
+      "bytes": 1224
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-04.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/VerifyDetachedTest/test-04.js",
+      "sha256": "c9d171ebc464ed8d6744d9832fe21317a22fd45bb893bc8e3b44449c806e4543",
+      "bytes": 3906
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-05.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/VerifyDetachedTest/test-05.js",
+      "sha256": "4d72d194dc5e07c0739678216da74b519adc303bfe6fe7a865abcfd3728f82a7",
+      "bytes": 1642
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-06.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/VerifyDetachedTest/test-06.js",
+      "sha256": "c1d747ff8dd2b56a374d42a785d55c9fa04387a57d32dc75f7683416f199589d",
+      "bytes": 1386
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-07.js",
+      "sourcePath": "frog/worker/tests/curve25519/ed25519/VerifyDetachedTest/test-07.js",
+      "sha256": "2d7e5632c6e35b3aa201c78e4660add2cc04291af657017828d105898fa8ce67",
+      "bytes": 1329
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519AddTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519AddTest/test-01.js",
+      "sha256": "e97071c185acb65da8633d1a80bf6a2f6c7a0bb230cefdf67eec107efce544b3",
+      "bytes": 509
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CMovTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519CMovTest/test-01.js",
+      "sha256": "30a331c58773bd825b03810f63d25d6a33163489c75bf474f330fcadfed6ae4b",
+      "bytes": 981
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CSwapTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519CSwapTest/test-01.js",
+      "sha256": "0de25786bb775ea1d3ffbeb10db0c47e3dfbeb07061bb35b23c0254838c2295b",
+      "bytes": 889
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CSwapTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519CSwapTest/test-02.js",
+      "sha256": "3f164df7c1e770b4e1f45e77a269a968a369fe9e1e098f88dd8a3d8e518d2cb9",
+      "bytes": 1067
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CopyTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519CopyTest/test-01.js",
+      "sha256": "cbd18c551165f52ecf0999f5a1a78aadcb7107dba8c96e3e8b3740c7efc3c4a1",
+      "bytes": 453
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519FromBytesTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519FromBytesTest/test-02.js",
+      "sha256": "019b542de67ac5f334f0f396937047f5d0a520cff389dd7bc5f61ec4a18bf80f",
+      "bytes": 944
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519InvertTest/test-01.js",
+      "sha256": "10dc3c8e6aafffa9cd1dc6cbd75cc0b7efa74e26e4358f856c07c98efe0b4f7f",
+      "bytes": 702
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519InvertTest/test-02.js",
+      "sha256": "3120427e154266c2d0b6c3f1f211113469d72e563d4422d13e465ed47a9aa0dd",
+      "bytes": 1887
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519InvertTest/test-03.js",
+      "sha256": "1d9278f306f6e16cb517ecb05d0db213e0c5535b5f1bdd6c9383aa4c99404b70",
+      "bytes": 1324
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519IsNegativeTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519IsNegativeTest/test-01.js",
+      "sha256": "3838e3031df8a3c260234d4c3379e1e084ef62d7378d2fee623a7bebb02a50f7",
+      "bytes": 1422
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519IsZeroTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519IsZeroTest/test-01.js",
+      "sha256": "c7b81538b20c30865fba39e2981d7489095883e2ec9c54e522781819b807c876",
+      "bytes": 689
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519MulTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519MulTest/test-01.js",
+      "sha256": "c7b81538b20c30865fba39e2981d7489095883e2ec9c54e522781819b807c876",
+      "bytes": 689
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519NegTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519NegTest/test-01.js",
+      "sha256": "a8f1e96eb0fa19c5b593f2e7cc4525e8510946415f91ba0ab93794a7679df747",
+      "bytes": 782
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519OneTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519OneTest/test-01.js",
+      "sha256": "a6a036b9e1d6299342a3b7eb791e20e03813fcd6ab180a627c9887a43b0a1256",
+      "bytes": 447
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Pow22523Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519Pow22523Test/test-01.js",
+      "sha256": "6857997ca8d8cc92fdc4b68f7d195efb82547e86fc1f48e254b44e2a9ed749e0",
+      "bytes": 570
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ReduceTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519ReduceTest/test-01.js",
+      "sha256": "c9f7f18570f74753e9ee7b142001e85f0ca36ea164fc92e892fbae825f8f0e0c",
+      "bytes": 522
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ReduceTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519ReduceTest/test-02.js",
+      "sha256": "1bab818322e3877a8cabda01b4488027cf76f8c889b7cf04bb55c1ea4b9393b9",
+      "bytes": 614
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Sq2Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519Sq2Test/test-01.js",
+      "sha256": "1e7979bfddd72cfeb05a5191e00efa4d90725773db808c22d6de1c6d2da67d80",
+      "bytes": 428
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SqTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519SqTest/test-01.js",
+      "sha256": "663a6a88ca13b57f002819e58da28d6853341c8cf73264c56225ac1daee68375",
+      "bytes": 424
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SqTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519SqTest/test-02.js",
+      "sha256": "55b5bd0790b8b552668500be7e74b0b5817e0f46492c42d09c550ea1a7e37235",
+      "bytes": 874
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SubTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519SubTest/test-01.js",
+      "sha256": "19238de1355fa1974f929798fa3df1f17facbfd7a4378f2ac1e30fbf25de1b5a",
+      "bytes": 508
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SubTest/test-trip-round.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519SubTest/test-trip-round.js",
+      "sha256": "74317d463d44430c24efa8d3e787fad7806491abd326b6f8739029703ac3553f",
+      "bytes": 1841
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Test/test-type-of.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519Test/test-type-of.js",
+      "sha256": "a4a95643eea45d159a1fb8c11b64fe98b89c04b85ddb19bc6523f87eb8d38d4d",
+      "bytes": 256
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519ToBytesTest/test-01.js",
+      "sha256": "faf200257f8be2d1797db73119c91542b037bb3f98bf9cc37553d775c1ce347c",
+      "bytes": 755
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519ToBytesTest/test-02.js",
+      "sha256": "2f75690f4e45db936744c4e3db042cca51a70442ed11bc7c9aee735a5933cfcf",
+      "bytes": 905
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-round-trip.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519ToBytesTest/test-round-trip.js",
+      "sha256": "ee779b16ccc5458ad45bd38a815ccad3df323b34e3c6049e88db7866552dd55b",
+      "bytes": 1574
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ZeroTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/fe25519/Fe25519ZeroTest/test-01.js",
+      "sha256": "9afc07cb6bc1c612aa49ea85677a0a2800a07e5aedf36fd97a4d63296ab1ab47",
+      "bytes": 450
+    },
+    {
+      "path": "tests/curve25519/ge25519/EqualTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/EqualTest/test-01.js",
+      "sha256": "34e63d4997e0643f96a64efe1d091b09e21025a2472c3058a1c5df19f8fa82e8",
+      "bytes": 929
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519AddCachedTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519AddCachedTest/test-01.js",
+      "sha256": "1cac4626883b1c83ed9f8d3e801e4e845c2111719d08af4912cbd1c7bc94d385",
+      "bytes": 2332
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519AddPrecompTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519AddPrecompTest/test-01.js",
+      "sha256": "8678bb83d44973e4b80be60fb3d8186a7d999889ccac2226012556033ca199d4",
+      "bytes": 1991
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519CachedTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519CachedTest/test-01.js",
+      "sha256": "b932b66068163c0a5b1c08894d1c893d758b0a21dcbaf3747e9f0243c434276c",
+      "bytes": 1206
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519Cmov8BaseTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519Cmov8BaseTest/test-01.js",
+      "sha256": "ee22627cf59cdf38e5cc7840afa52a4975baa82a1f31faaf1afc2b543009f2b3",
+      "bytes": 1913
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519Cmov8Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519Cmov8Test/test-01.js",
+      "sha256": "9e8759fcbce0c5d672851c56aa3029a6830a24fa7e874d7c041e5c6404f924ce",
+      "bytes": 1786
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519CmovTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519CmovTest/test-01.js",
+      "sha256": "e197c74529d1605072c694f8ef465e68f41377892317e204ffd45ae374504610",
+      "bytes": 1497
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-01.js",
+      "sha256": "ca6d459bc61420fff29b00686c14b794994709a6bfc4c9310ca5cafd616504d1",
+      "bytes": 1330
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-03.js",
+      "sha256": "d9d74f043d09e18659b8353795c384f6e5c9d545136907f8d6fa9dc0c9f1e034",
+      "bytes": 1744
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-04.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-04.js",
+      "sha256": "88cc933ee51feec3ad7bb3cbfaf5c5001c8780f0f6d53e4e730bc81c3ceaf9cd",
+      "bytes": 1456
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519FromBytesTest/test-01.js",
+      "sha256": "2b185efc6dae8857305a6a70aa740984379fed607756be45c6ed85a61e9412ee",
+      "bytes": 1516
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519FromBytesTest/test-02.js",
+      "sha256": "c9aeb0f87b8700a465c13c40233438a51d957e8c1ea2cad3221f06c8561570e4",
+      "bytes": 1703
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519FromBytesTest/test-03.js",
+      "sha256": "18e79caa63788e276bdfbeb415e3fa47c7623020d10975fe0df6e7a3fc9d4920",
+      "bytes": 1072
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-04.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519FromBytesTest/test-04.js",
+      "sha256": "190e09df4a2e2620ca251f26cfc5d512e45deeb8e5c394384bedeb278d47f00d",
+      "bytes": 1071
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519HasSmallOrderTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519HasSmallOrderTest/test-01.js",
+      "sha256": "df0d462ed7ee27ca6b0e286cd6c0279fba72897bc801e910000025e8ca5371d9",
+      "bytes": 831
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519HasSmallOrderTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519HasSmallOrderTest/test-02.js",
+      "sha256": "3636044307585d10b0d8d6f42ba9f7c749edd6895afbec25ec5ae1af6e268e2b",
+      "bytes": 1329
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519IsCanonicalTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519IsCanonicalTest/test-01.js",
+      "sha256": "9a43e45114c40bb44444a949376cf0dbe7d656416831536cbc14fcd376cecc69",
+      "bytes": 917
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P1p1Test/test-01.js",
+      "sha256": "4e8c83efaa44e733f587c2c8aad0aadf8c56589c90d9fde128149104f10d61da",
+      "bytes": 1185
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1ToP2Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P1p1ToP2Test/test-01.js",
+      "sha256": "1b2d597d6e3cea5ba60ea37771625481c5e168019c7f5e5cc9048ea2e923d269",
+      "bytes": 1130
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1ToP3Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P1p1ToP3Test/test-01.js",
+      "sha256": "9612d8c3560d3b46b0b48c0ec72da33b71f70e6c878513cdd9d42761ea90112b",
+      "bytes": 1397
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2DblTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P2DblTest/test-01.js",
+      "sha256": "332c4e1dc2407cc2e9926591c467b51c42e29ae9080130cdfa1e6db2ccc88f8a",
+      "bytes": 1548
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P2Test/test-01.js",
+      "sha256": "9710ba942b15d61e9fce4e15ec4c0d32b43847b9fc9feb09a419685adcee8d6c",
+      "bytes": 1107
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2ToP3Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P2ToP3Test/test-01.js",
+      "sha256": "988fbf2491c8c0ad15e8914451c02457a1f625926289ca86fe94eff999286beb",
+      "bytes": 1543
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2ZeroTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P2ZeroTest/test-01.js",
+      "sha256": "81fd369192769404557492fbd1b33c12da9257ebdab00f7e26262550059f9add",
+      "bytes": 1351
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3AddTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3AddTest/test-01.js",
+      "sha256": "f915201001680614b2c55097cd6915e17af5d69f07db377517c471696430a563",
+      "bytes": 2642
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3DblTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3DblTest/test-01.js",
+      "sha256": "5d82b29e194b655e99e352a65163eed502bbed0cfa88be13d6809e971a61f20f",
+      "bytes": 1217
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3Mul16Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3Mul16Test/test-01.js",
+      "sha256": "77d3cf8288d7aa87ceb1ba2f3fb47fd9a9e6f5515515484cf3bcaf1cdfd1bc4a",
+      "bytes": 2002
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3NegTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3NegTest/test-01.js",
+      "sha256": "7350d681140cc327235f3957f49bd53c2b26845668892ee18c5abc704b8164e0",
+      "bytes": 1140
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ReduceTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3ReduceTest/test-01.js",
+      "sha256": "afc88fa4277a3b1989d64669ed1c83b49a65f03cfaf025c93e70ec141c72f9cb",
+      "bytes": 1714
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3SubTest/test-01.js",
+      "sha256": "046936dd47d34c2281905a831e4de0e0470471bfdc84f27c19677d5968ad0629",
+      "bytes": 1041
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3SubTest/test-02.js",
+      "sha256": "b385802892f70e6115d64835efea5cb544244ce5cd5fbcde528fe5211e9511c3",
+      "bytes": 1944
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3SubTest/test-03.js",
+      "sha256": "ed2beb31df11d6a34cd169d7addcbd346747e6c579c14683391e06c0f8be9d21",
+      "bytes": 3407
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3Test/test-01.js",
+      "sha256": "c78b6ed80b9dcb5322aab6f31c266222b0b525093199758dc065c372e767f486",
+      "bytes": 1158
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToBytesTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3ToBytesTest/test-01.js",
+      "sha256": "060658f21e6ee8412494cb8d53a378dcd3576a2138b5a1a383be0282cebe4a8d",
+      "bytes": 1023
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToCachedTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3ToCachedTest/test-01.js",
+      "sha256": "4dd2af3deb856c7de206f24fe2797c039b507033eb3d1020aa7c1ac21d5b6438",
+      "bytes": 1577
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToP2Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3ToP2Test/test-01.js",
+      "sha256": "eedc5279c6b50c29f5f7adab79d108c8aae1fa2cff80c790f004788f22664a10",
+      "bytes": 1089
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ZeroTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519P3ZeroTest/test-01.js",
+      "sha256": "19485a212d3def810a56cb5e43cc4eba5985568a96fe29355cee2912f3f4ab5b",
+      "bytes": 611
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519PrecompTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519PrecompTest/test-01.js",
+      "sha256": "d2c791323a465fbe24eb249521a63f25633bdecf243802720d9661163220a49d",
+      "bytes": 1165
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519PrecompZeroTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519PrecompZeroTest/test-01.js",
+      "sha256": "761718a5c4b25398460a2bb70560f21dd79a21447d4e4a4ec238d3dbfdfaf8fd",
+      "bytes": 643
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519ScalarmultBaseTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519ScalarmultBaseTest/test-03.js",
+      "sha256": "ee1776e9e19f21d3b816d0cce0eef4380d36ecc497f52186d148e07fb61bcfeb",
+      "bytes": 958
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519SubCachedTest/test-01.js",
+      "sha256": "d14bd026cd2bffa92f4655ce3b0d0e25484eb9035979f09cc8d1aa3e494c954c",
+      "bytes": 2041
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519SubCachedTest/test-02.js",
+      "sha256": "10392cfc1814cb6d2ef0512e3eeb7dcffe7a64b5b1434992738f66b3d9d91d1e",
+      "bytes": 2167
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519SubCachedTest/test-03.js",
+      "sha256": "ddb2381fa15eaa01911488028cc1403da227d6981caec5632d91540889e0979c",
+      "bytes": 2464
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519SubPrecompTest/test-01.js",
+      "sha256": "5de0d4bcdf30f6f6f9ca35f49194ddf24db6a7e8c43c688ec65dc80e3fcda944",
+      "bytes": 2008
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519SubPrecompTest/test-02.js",
+      "sha256": "3d1ebda188b55dce327eb497bae8d944182deac81c430a74eae57bff54c9c4aa",
+      "bytes": 2229
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/Ge25519SubPrecompTest/test-03.js",
+      "sha256": "673b9cdd8506a4569cab7f2a1c00693e31a6e585909d76e0d6dbe62c8c420710",
+      "bytes": 2505
+    },
+    {
+      "path": "tests/curve25519/ge25519/ScalarToRadix16Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/ScalarToRadix16Test/test-01.js",
+      "sha256": "c62a95bf6672e86a39d23c0a46adacf497ea1434ed81cd114bf649d75ee62c25",
+      "bytes": 1045
+    },
+    {
+      "path": "tests/curve25519/ge25519/ScalarToRadix16Test/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/ge25519/ScalarToRadix16Test/test-02.js",
+      "sha256": "a9987cd2543aa8aed28c484c176e6adaab18a77ef9cfb00b73874bc2e094a577",
+      "bytes": 1469
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519FromBytesTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/sc25519/Sc25519FromBytesTest/test-01.js",
+      "sha256": "348a332e2a5f8f7edb219487650abe3c1c123ca1e01559e93761b1d5f912252f",
+      "bytes": 895
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519IsCanonicalTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/sc25519/Sc25519IsCanonicalTest/test-01.js",
+      "sha256": "724951d47bce388e4813bf94b897601bc5cb352fae47052fe5de88e61bd5b0c7",
+      "bytes": 877
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519MulAddTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/sc25519/Sc25519MulAddTest/test-01.js",
+      "sha256": "71ba745bf47cf06988e656e21ccded1871ab1e71ddc9208a74da96495e9a4959",
+      "bytes": 1220
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519ReduceTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/sc25519/Sc25519ReduceTest/test-01.js",
+      "sha256": "08494cb43a9c872553fd2bdfb7cd500a5760b2d9cdfdcaf3525b975d51f6ea31",
+      "bytes": 739
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/sc25519/Sc25519Test/test-01.js",
+      "sha256": "7a1ea07dc94bd2d58294318d04f76eacfcc6494602625d4d5306d923e7bef818",
+      "bytes": 822
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519ToBytesTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/sc25519/Sc25519ToBytesTest/test-01.js",
+      "sha256": "f1e688e82748e91aa7edd5614bd05c606d3d3711906f0b51258993c97afdcb97",
+      "bytes": 961
+    },
+    {
+      "path": "tests/curve25519/x25519/EdwardsToMontgomeryTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/x25519/EdwardsToMontgomeryTest/test-01.js",
+      "sha256": "9ecccec061016b023d89ad343891b2bf4af770540709ea5f952963bbd09faa16",
+      "bytes": 1033
+    },
+    {
+      "path": "tests/curve25519/x25519/EdwardsToMontgomeryTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/x25519/EdwardsToMontgomeryTest/test-02.js",
+      "sha256": "47abf8d9786016bf33795114427da88308555d7d2eae32d8a993efd85dbc359b",
+      "bytes": 1518
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/x25519/MontgomeryLadderTest/test-01.js",
+      "sha256": "68624c39fe8942536b8403392121de07795c9cd754ab1fbf12659717f1cc104a",
+      "bytes": 1081
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/x25519/MontgomeryLadderTest/test-02.js",
+      "sha256": "aaddb561b677768480be7bce86f859d7d79065e85da6f73ac9ad6cc21924a06b",
+      "bytes": 713
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-03.js",
+      "sourcePath": "frog/worker/tests/curve25519/x25519/MontgomeryLadderTest/test-03.js",
+      "sha256": "6f8e7d1e57f8336be42935ffbce851824d1509f3085dfc3fe6e49dae1fadbb06",
+      "bytes": 1682
+    },
+    {
+      "path": "tests/curve25519/x25519/ScalarmultCurve25519Test/test-01.js",
+      "sourcePath": "frog/worker/tests/curve25519/x25519/ScalarmultCurve25519Test/test-01.js",
+      "sha256": "3a0466225f6efd6286f8a3316b24a3cfcc139e1e00e1785ff3c85c10ab016ece",
+      "bytes": 1473
+    },
+    {
+      "path": "tests/curve25519/x25519/ScalarmultCurve25519Test/test-02.js",
+      "sourcePath": "frog/worker/tests/curve25519/x25519/ScalarmultCurve25519Test/test-02.js",
+      "sha256": "439eb79196fe2103af1a6703e23595e1adad543ed55086476f70ed3e4da917e9",
+      "bytes": 1473
+    },
+    {
+      "path": "tests/crypto/sha512/CalcChTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcChTest/test-01.js",
+      "sha256": "78a0937799143e905c51891a68c04527c0fc0426cb729c714ea3b861f36355d3",
+      "bytes": 1137
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMSCHTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcMSCHTest/test-01.js",
+      "sha256": "c3f89708e99d511ada6208db3cd01e05e3e1592ed30d9acb79f33bcbf038978a",
+      "bytes": 1501
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMajTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcMajTest/test-01.js",
+      "sha256": "de24c073e726f18c02541a7fa80d2b6ffbf97e0558d0c2bd79da7bffdaa4f316",
+      "bytes": 1141
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMajTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcMajTest/test-02.js",
+      "sha256": "419c2a4f3e9987859a3070174c755a7b1a5eb2b4ddb31eccb8b160e9d96da6a5",
+      "bytes": 917
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcRNDTest/test-01.js",
+      "sha256": "258ebcb7322d8f74fb784f4b6816efb9d39659f270365abd87ff769ad5bde07c",
+      "bytes": 1645
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcRNDTest/test-02.js",
+      "sha256": "1392115608772137857a0a361509058725704b2ce0e3e0c464d12c93072e7bf1",
+      "bytes": 4357
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDrTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcRNDrTest/test-01.js",
+      "sha256": "ac3110173964b5362dfb8e3ef3d9a764e6e2c8a69c255e0561dc7e5477c4b4c9",
+      "bytes": 1952
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl0Test/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcSl0Test/test-01.js",
+      "sha256": "70a07694f6ebf09c6acfad3d1bbf39bc48470c1ebf31cbc573a9ea7526403bab",
+      "bytes": 1019
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl0Test/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcSl0Test/test-02.js",
+      "sha256": "91fb13d6d78328384ee4d85eedf1ea1394c2e78c614ffacd0ea420dc20a28d46",
+      "bytes": 1138
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl1Test/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcSl1Test/test-01.js",
+      "sha256": "12a9ca2cef2942edfb930b87970a1ec3937889f83d9322f84ae820d44ec208ba",
+      "bytes": 756
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl1Test/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcSl1Test/test-02.js",
+      "sha256": "efb030aac5b71a771a655c5372c5215cfc6d7403eb1d400a0c8e2cda07d1ac31",
+      "bytes": 919
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu0Test/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcSu0Test/test-01.js",
+      "sha256": "2cdcce50438ff26d2e6040905eb56915f14bcac2c25087eb99106e4886135ba4",
+      "bytes": 1350
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu0Test/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcSu0Test/test-02.js",
+      "sha256": "6cdc4610b1a9c3f5184b5094ba9ba8c2881b98a95f9f384d668068f157401cdd",
+      "bytes": 790
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu1Test/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcSu1Test/test-01.js",
+      "sha256": "38f18232f70804aa49c7aa6ea747f7ba094a8a687c1ffba55565ebdce23005b8",
+      "bytes": 741
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu1Test/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/CalcSu1Test/test-02.js",
+      "sha256": "e56bb3db17b1b1b895efc29316a5057fca035098619f31b2d4be478e6e4f9099",
+      "bytes": 790
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExpandTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HkdfSha512ExpandTest/test-01.js",
+      "sha256": "89dfb2cbc16cf40dd0bc8e95be530d1444d1bfc2ec030a3043242bf63d208daa",
+      "bytes": 798
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExpandTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HkdfSha512ExpandTest/test-02.js",
+      "sha256": "38eaab01e348c5bb0fe1a897278be9b2e7955ef25772978c07d587951ce40198",
+      "bytes": 3358
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExtractTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HkdfSha512ExtractTest/test-01.js",
+      "sha256": "0598ca3782fbb8ed7479af26735407df72ec9589909d9908c3190b9afe4d197b",
+      "bytes": 659
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HmacSha512FinishTest/test-01.js",
+      "sha256": "6599b287082ad8eb05d3e43f7b74a069eb3f5f848eb2dc27d768f2971f6ca1fc",
+      "bytes": 1217
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HmacSha512FinishTest/test-02.js",
+      "sha256": "e18283a52b059a991b197836081d151850d98fbbdf60390db6d7ebed1254bb7c",
+      "bytes": 1452
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-03.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HmacSha512FinishTest/test-03.js",
+      "sha256": "28136f6fa4fac5d7d2beff827d674cfee5343b05459be906a481c231f439d7ec",
+      "bytes": 4743
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512InitTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HmacSha512InitTest/test-01.js",
+      "sha256": "2b40e91acad5cdfd792bd12681f35a1f999d57d39b9dc9cf42de60dd36f1b5b7",
+      "bytes": 2615
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512StateTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HmacSha512StateTest/test-01.js",
+      "sha256": "7b061f37dba5869e06e364792487b9cda4ca99fab0214b84ddaa9816f622a605",
+      "bytes": 2815
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512UpdateTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/HmacSha512UpdateTest/test-01.js",
+      "sha256": "00e5e961f36bb642c6e6a3b361971a9f910426bd586b0039f911a563b82a1993",
+      "bytes": 1892
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512FinalTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512FinalTest/test-01.js",
+      "sha256": "a8cfde5228ae72066c640fec6ac27e13de621ce4b4a97a5ef707d2cb76fe804b",
+      "bytes": 874
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512InitTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512InitTest/test-01.js",
+      "sha256": "3340cdc69d56ada34af6c1becc382fc9b418a053631950d0daa643ef782296e2",
+      "bytes": 701
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512PadTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512PadTest/test-01.js",
+      "sha256": "fc43452703debd2d9d7b2043547b346ed27126cb6ab599ad679078a3449663bd",
+      "bytes": 1788
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512PadTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512PadTest/test-02.js",
+      "sha256": "f842a10d14b76796907a2106a5777d9fec9ebea3de8eb3978f8d0bbae7217318",
+      "bytes": 2342
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512StateTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512StateTest/test-01.js",
+      "sha256": "34e1bab71588b7ea784c53b236ee8fdd25fde6f22ede35448f52274fd2a11371",
+      "bytes": 1281
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512Test/test-01.js",
+      "sha256": "7e112cf319cf39784badfee997f2b09afef4c9a66018833d33977d437b35a1dd",
+      "bytes": 901
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512Test/test-02.js",
+      "sha256": "e9d7ebdd8522a28b5a8b673d5140f3e32d5100b78f98a474175cefa49415ea47",
+      "bytes": 1101
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-03.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512Test/test-03.js",
+      "sha256": "a568b0996cc5e986a6cfa46c08ae46ae54842c4cbf86064b18ede92e43a208c8",
+      "bytes": 2671
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512TransformTest/test-01.js",
+      "sha256": "58ae8c3ac17a02b61cd9e64abed332fbf22137a8af2ee6264e06a8988459ff3b",
+      "bytes": 1713
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512TransformTest/test-02.js",
+      "sha256": "9231751f7ab2039713aa2b6cd6e376fdb296d975fa05d6be749c38e437247c94",
+      "bytes": 1779
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-03.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512TransformTest/test-03.js",
+      "sha256": "9c27c7e8f5f62c762b39dacd5568fcadb126e5223ddccef633ce5c0edcff23f6",
+      "bytes": 1777
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512UpdateTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512UpdateTest/test-01.js",
+      "sha256": "fc3dff95883efd4dad2f90d77e47de747ad62c4f18c39783e0a4867b2a722040",
+      "bytes": 1950
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512UpdateTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Sha512UpdateTest/test-02.js",
+      "sha256": "fd4cf5d72adae5936d07d7b7ca5a4de06459ecc5ec8d6f48895f04e7dc74dfed",
+      "bytes": 1417
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint64Array1024BETest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/ToUint64Array1024BETest/test-01.js",
+      "sha256": "7db45d1ff7f25954c95ebf2e2397cd9831f324cbd8b07d4d1397e7b217f617ce",
+      "bytes": 1397
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint8Array128BETest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/ToUint8Array128BETest/test-01.js",
+      "sha256": "abb15c12a793f6436d3d33eb30afb2d69032f8ec43f171244a0744af8aa37e66",
+      "bytes": 1255
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint8Array512BETest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/ToUint8Array512BETest/test-01.js",
+      "sha256": "5899b4cc7414b17ee1cc9c1571eab64c959f554977ca8597a34893b52cd24c5a",
+      "bytes": 2373
+    },
+    {
+      "path": "tests/crypto/sha512/Word64AddTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Word64AddTest/test-01.js",
+      "sha256": "644e059849fb29e941ab9004d8e34f42736b8f59daba06835872e7d09316aa02",
+      "bytes": 1124
+    },
+    {
+      "path": "tests/crypto/sha512/Word64RotateTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Word64RotateTest/test-01.js",
+      "sha256": "9c973bb58e5371b5179fae77601b13ab6b9c738e2829c7e082ad9a822563f186",
+      "bytes": 615
+    },
+    {
+      "path": "tests/crypto/sha512/Word64ShiftTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Word64ShiftTest/test-01.js",
+      "sha256": "257a9806f00df8d6bd6dbeaad77008131ff74ed0866f5cbe40b9f40273332ca3",
+      "bytes": 1983
+    },
+    {
+      "path": "tests/crypto/sha512/Word64XORTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/sha512/Word64XORTest/test-01.js",
+      "sha256": "f87484e5d19eb52e35dc2ffe0771058e5284772d15f4cbdcdf522e9e9b4310be",
+      "bytes": 983
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/CalcQuarterRoundTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/CalcQuarterRoundTest/test-01.js",
+      "sha256": "01b9dfaf88c53f41fc5a14e93a06e5745f552737653e84659918a9e6020f13df",
+      "bytes": 803
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20EncryptBytesTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20EncryptBytesTest/test-01.js",
+      "sha256": "be9841d8934c4d3df76628c7b87c4a120a48deefc6c73b69a351beea0dc3df63",
+      "bytes": 1459
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-01.js",
+      "sha256": "e2402a8e05f99d7ed7d7029ddb62d45144d533812f7ca55b4c7b35412d3de9e6",
+      "bytes": 1178
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-02.js",
+      "sha256": "237a0339efc92784d0260c3d32a71366e86bb693bfe3d0297007300fa094a0e2",
+      "bytes": 3216
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-03.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-03.js",
+      "sha256": "a48db9dcd2aa919ec7ce799d7d3890badaa785a3925f380d475943edeac2ad4f",
+      "bytes": 1450
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-04.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-04.js",
+      "sha256": "7df42ce44b66ef830e152f8d67f9c66c342bcbce9f060b83e84d69fdb0eb5ad2",
+      "bytes": 1835
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-01.js",
+      "sha256": "3b267a8de64d69c521a55edaddcc1a7eafa91f0dfa7f023959cb774c86af6a0e",
+      "bytes": 1154
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-02.js",
+      "sha256": "500ec0dc992a58f66b2e80b4e9e1a06023ca0901c1779180fde4f6097c67672f",
+      "bytes": 3359
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-03.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-03.js",
+      "sha256": "5e80d5f03b66bb506b6c3fe2ec631776e612cade15910ddd1967ba229d839113",
+      "bytes": 1373
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-04.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-04.js",
+      "sha256": "e6fabb0c0a5a4178c38ac4f80cbcb91624a92df21e62aaced678ace2f22bf07c",
+      "bytes": 1797
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptDetachedTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptDetachedTest/test-01.js",
+      "sha256": "43a0a20dccab2b526cdf996bab649f81b1e1f4076e9de2aa0f9905373fbd1f66",
+      "bytes": 1099
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptDetachedTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptDetachedTest/test-02.js",
+      "sha256": "5221b1799b5ed6ee623ba2ee79b052f361a92ce83a3f32929c7b234a6da006de",
+      "bytes": 2123
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptTest/test-01.js",
+      "sha256": "9949a03aacccde65f0cf4be6fa0d35c78a1ccd6b1f95290becbec257bc1c3386",
+      "bytes": 1040
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptTest/test-02.js",
+      "sha256": "66e108717359238920c56e28d522c44b56356decd1b7cba881dfb0695375860b",
+      "bytes": 2133
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-01.js",
+      "sha256": "0100d33881bec8d86165be932b3d2b217c363cdb15c986251584d22564f5f83c",
+      "bytes": 1781
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-02.js",
+      "sha256": "2edd76e5581bb489fc74f1bea92638ab47a5902089aee4e2c6713b89de5e57e1",
+      "bytes": 1477
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-03.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-03.js",
+      "sha256": "ccbdcaa15abc3994a6422f096e6b730c2059aaa5a10b8ec0968a7fc831d055f1",
+      "bytes": 3256
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-04.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-04.js",
+      "sha256": "7f8d6eba1c1a4b6093b4a260aca7c369f2475daface60915786349ede74fac42",
+      "bytes": 1845
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaCtxTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ChachaCtxTest/test-01.js",
+      "sha256": "afffad83221f2c08d4cb95b7295f4ede13bb2a969772d25bc02fb08a58996631",
+      "bytes": 946
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaIvSetUpTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ChachaIvSetUpTest/test-01.js",
+      "sha256": "24558a2e54f379157ec8b1089ae00a73dc9bdb27a4fbd7f872df71019816c848",
+      "bytes": 2071
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaIvSetUpTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ChachaIvSetUpTest/test-02.js",
+      "sha256": "dfa075d1af3bb813232b8f5038d24566fd32bfdcaa5eee4588ad81612a4b5326",
+      "bytes": 1515
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaKeySetUpTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ChachaKeySetUpTest/test-01.js",
+      "sha256": "f9c8f19d2ad2bbcd86194d63e8a3462945543d76c6597fe9b77c3b49b2a39d1a",
+      "bytes": 1428
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/CrampRTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/CrampRTest/test-01.js",
+      "sha256": "1a9fa7ca36faabd5c58f4f429c0b91d136198b9a83f538f4acb4b89e633bf106",
+      "bytes": 2863
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305BlocksTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Poly1305BlocksTest/test-01.js",
+      "sha256": "8d67a2699f964ac9c4938f272a2d577b6161c741e96eaa6010ec83e5e15b9ac3",
+      "bytes": 468
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Poly1305FinishTest/test-01.js",
+      "sha256": "9d59c13fb5bd7f99adce0f3df21c80e285334a3e29c33d8c9c7ea8b587707b0e",
+      "bytes": 1580
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Poly1305FinishTest/test-02.js",
+      "sha256": "5a2806e8d5b0dc25fdffa0452d7c816bad3306b0a32c83e57fd32c5e005bd4ee",
+      "bytes": 1628
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-03.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Poly1305FinishTest/test-03.js",
+      "sha256": "e477a71895259cb7a05c63f4e4e3a0ba98765c12a747944d3748b5145766e71c",
+      "bytes": 3133
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-04.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Poly1305FinishTest/test-04.js",
+      "sha256": "9606c7ef2117c52cf770cae4f81566983d967fe6d9f6f2e46b41066db2cd0283",
+      "bytes": 3432
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305InitTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Poly1305InitTest/test-01.js",
+      "sha256": "145a39fba8e323fc8527684f099952e8efb947a662d3e3c260246966623a5d0a",
+      "bytes": 1428
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305StateTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Poly1305StateTest/test-01.js",
+      "sha256": "de96367602f9290d88d2445a15b68059080125c5b7339d481171c4f91f62de05",
+      "bytes": 1163
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305UpdateTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Poly1305UpdateTest/test-01.js",
+      "sha256": "27c2695d03eb2cbb00648590ccdf2939bb97e5a30dc4f082f9275b3d6bfb987b",
+      "bytes": 2139
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint128LETest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ToUint128LETest/test-01.js",
+      "sha256": "8665da420321315707268e0e8fca0f18a28b9ad50805d0238073aa97479e0a1d",
+      "bytes": 1330
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint128LETest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ToUint128LETest/test-02.js",
+      "sha256": "866f872e2925f297387ceba43edc639b33096e15b71819e2a58aabcb690533c2",
+      "bytes": 1778
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint32LETest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ToUint32LETest/test-01.js",
+      "sha256": "c8958ea5a8dede7d4c816955058cd051f067232ffe4ad8429de7d0f10b68b8b3",
+      "bytes": 1028
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array128LETest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ToUint8Array128LETest/test-01.js",
+      "sha256": "c81be957326c55875418a98467a4daf38a3a06af2d95734e662e5e7db5331e3c",
+      "bytes": 1433
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array32LETest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ToUint8Array32LETest/test-01.js",
+      "sha256": "db594b0022c41575fa7d25092294cfd0cc2ad56e07972a50bd2b98603f551c19",
+      "bytes": 1217
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array64LETest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/ToUint8Array64LETest/test-01.js",
+      "sha256": "8846e1c61464668d5a3d47a0665232a4d510d7b1ffdc117e589c3723aadb1989",
+      "bytes": 1219
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Word32RotateTest/test-01.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Word32RotateTest/test-01.js",
+      "sha256": "5379eaacfcf6defec65f9aba1605625f1209dffcee27f15cd1915560c025faa6",
+      "bytes": 1090
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Word32RotateTest/test-02.js",
+      "sourcePath": "frog/worker/tests/crypto/chacha20poly1305/Word32RotateTest/test-02.js",
+      "sha256": "5d4115d15f815f0c396d9460837b0ea40efbd3b5c0ecc616b919319d10da1143",
+      "bytes": 986
+    }
+  ],
+  "omittedTestCandidates": [
+    "tests/curve25519/BaseRadix2Test/test-compare-base-2.js",
+    "tests/curve25519/BaseTest/test-01.js",
+    "tests/curve25519/BaseTest/test-02.js",
+    "tests/curve25519/BaseTest/test-03.js",
+    "tests/curve25519/BaseTest/test-04.js",
+    "tests/curve25519/BaseTest/test-05.js",
+    "tests/curve25519/BaseTest/test-compare-base.js",
+    "tests/curve25519/ConstTest/test-ed25519-x.js",
+    "tests/curve25519/fe25519/Fe25519AbsTest/test-01.js",
+    "tests/curve25519/fe25519/Fe25519CNegTest/test-01.js",
+    "tests/curve25519/fe25519/Fe25519NotSquareTest/test-01.js",
+    "tests/curve25519/fe25519/Fe25519SqrtTest/test-01.js",
+    "tests/curve25519/fe25519/Fe25519SquareMulTest/test-01.js",
+    "tests/curve25519/fe25519/Fe25519SquareMulTest/test-02.js",
+    "tests/curve25519/fe25519/Fe25519UncheckedSqrtTest/test-01.js",
+    "tests/curve25519/ge25519/Ge25519P3ToPrecompTest/test-01.js",
+    "tests/curve25519/ge25519/Ge25519ScalarmultBaseTest/test-01.js",
+    "tests/curve25519/ge25519/Ge25519ScalarmultBaseTest/test-02.js",
+    "tests/curve25519/sc25519/Sc25519InvertTest/test-01.js",
+    "tests/curve25519/sc25519/Sc25519MulTest/test-01.js",
+    "tests/curve25519/sc25519/Sc25519SquareMulTest/test-01.js",
+    "tests/curve25519/sc25519/Sc25519SquareTest/test-01.js",
+    "tests/crypto/sha512/Word64ANDTest/test-01.js",
+    "tests/crypto/sha512/Word64ORTest/test-01.js",
+    "tests/crypto/chacha20poly1305/Chacha20Test/test-01.js",
+    "tests/crypto/chacha20poly1305/Chacha20Test/test-02.js"
+  ],
+  "excluded": [
+    "PHP test harnesses",
+    "browser HTML test pages",
+    "CLI run-* fixtures",
+    "application and authentication code",
+    "dist bundles",
+    "unreachable crypto helpers"
+  ]
+}

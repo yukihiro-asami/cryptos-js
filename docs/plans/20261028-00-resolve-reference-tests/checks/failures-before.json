@@ -1,0 +1,27 @@
+[
+  {
+    "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-03.js",
+    "exitCode": 1,
+    "output": "Uint8Array(32) [\n   88, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102\n]\nUint8Array(32) [\n   88, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 230\n]\nAssertion failed: Byte mismatch at index 31:\n  original=102\n  roundtrip=230\n"
+  },
+  {
+    "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-01.js",
+    "exitCode": 1,
+    "output": "Assertion failed: reject invalid encoding with high-bit set and non-square failed (ret=0)\n"
+  },
+  {
+    "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-03.js",
+    "exitCode": 1,
+    "output": "Assertion failed: Expected: c3da55379de9c6908e94ea4df28d084f32eccf03491c71f754b4075577a28552, got: 53c6fddfdb204112a0c63e4c484107210002f6e3d4cd3dae748750b08bc00b1e\n"
+  },
+  {
+    "path": "tests/crypto/sha512/HmacSha512FinishTest/test-02.js",
+    "exitCode": 1,
+    "output": "file:///Users/asamiyukihiro/Documents/GitHub/cryptos-js/tests/crypto/sha512/HmacSha512FinishTest/test-02.js:2\nimport { hmacSha512update } from '../../../../src/crypto/sha512/hmac-sha512-update.js';\n         ^^^^^^^^^^^^^^^^\nSyntaxError: The requested module '../../../../src/crypto/sha512/hmac-sha512-update.js' does not provide an export named 'hmacSha512update'\n    at #asyncInstantiate (node:internal/modules/esm/module_job:455:21)\n    at async ModuleJob.run (node:internal/modules/esm/module_job:553:5)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v24.22.1\n"
+  },
+  {
+    "path": "tests/crypto/sha512/HmacSha512FinishTest/test-03.js",
+    "exitCode": 1,
+    "output": "file:///Users/asamiyukihiro/Documents/GitHub/cryptos-js/tests/crypto/sha512/HmacSha512FinishTest/test-03.js:2\nimport { hmacSha512update } from '../../../../src/crypto/sha512/hmac-sha512-update.js';\n         ^^^^^^^^^^^^^^^^\nSyntaxError: The requested module '../../../../src/crypto/sha512/hmac-sha512-update.js' does not provide an export named 'hmacSha512update'\n    at #asyncInstantiate (node:internal/modules/esm/module_job:455:21)\n    at async ModuleJob.run (node:internal/modules/esm/module_job:553:5)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v24.22.1\n"
+  }
+]

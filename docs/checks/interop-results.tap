@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: Ed25519: 4 seeds × 6 lengths; Node public keys/signatures, cross-verification and tamper rejection
+ok 1 - Ed25519: 4 seeds × 6 lengths; Node public keys/signatures, cross-verification and tamper rejection
+  ---
+  duration_ms: 139.216292
+  type: 'test'
+  ...
+# Subtest: X25519: 8 key pairs; Node public keys, shared secrets and both directions
+ok 2 - X25519: 8 key pairs; Node public keys, shared secrets and both directions
+  ---
+  duration_ms: 34.393417
+  type: 'test'
+  ...
+# Subtest: SHA-512: 14 lengths including block and padding boundaries
+ok 3 - SHA-512: 14 lengths including block and padding boundaries
+  ---
+  duration_ms: 4.690834
+  type: 'test'
+  ...
+# Subtest: HKDF-SHA-512: 3 salts × 6 positive output lengths match Node; zero length checked separately
+ok 4 - HKDF-SHA-512: 3 salts × 6 positive output lengths match Node; zero length checked separately
+  ---
+  duration_ms: 14.420667
+  type: 'test'
+  ...
+# Subtest: ChaCha20-Poly1305: 9 lengths × 3 AAD lengths; Node ciphertext/tag, round trip and tamper rejection
+ok 5 - ChaCha20-Poly1305: 9 lengths × 3 AAD lengths; Node ciphertext/tag, round trip and tamper rejection
+  ---
+  duration_ms: 3.645625
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 323.911625

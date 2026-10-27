@@ -1,0 +1,53 @@
+{
+  "plan": "20261028-00-resolve-reference-tests",
+  "files": [
+    {
+      "path": "src/curve25519/ge25519/ge25519-from-bytes-negate-vartime.js",
+      "originalSha256": "2517a6543b708aef2ca83667134e1858a8e76be737f30be7ac9ddb048e3c7d0d",
+      "currentSha256": "077c226147765fa359d7ef37d2bf1ff8c54ef48801ea9db1794ed559147ea73b",
+      "reason": "RFC 8032 \u00a75.1.3: reject y>=p and the x=0/sign=1 encoding before returning the decoded point."
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-from-bytes.js",
+      "originalSha256": "5db35c09a1408a4ae4bcd7c822d1eda45a1983af54d5f1a114e1046bf5fef066",
+      "currentSha256": "ce4d79bd0beaa57e0c68b2e1d28f7333410c253d2b12cabc12d26e250753a6f0",
+      "reason": "RFC 8032 \u00a75.1.3: reject y>=p and the x=0/sign=1 encoding before returning the decoded point."
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-03.js",
+      "originalSha256": "1d9278f306f6e16cb517ecb05d0db213e0c5535b5f1bdd6c9383aa4c99404b70",
+      "currentSha256": "60398823fc990618cbed9f6f68fe7b19f4bf78e4f179eb3e155fb966af66a265",
+      "reason": "Add progress and completion count/duration; keep the same one million inputs and assertions."
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-03.js",
+      "originalSha256": "d9d74f043d09e18659b8353795c384f6e5c9d545136907f8d6fa9dc0c9f1e034",
+      "currentSha256": "c437d7863690b56e09b461918c3dbb1215c6e20b6034e1c2bb040ba540a3dfb9",
+      "reason": "Assert the negated point encoding and verify double negation, instead of expecting unchanged sign."
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-01.js",
+      "originalSha256": "2b185efc6dae8857305a6a70aa740984379fed607756be45c6ed85a61e9412ee",
+      "currentSha256": "2fc8850866c0d4954d362f832267ac8f0436ecf525aa6fdc9e2d9172b7bf66d5",
+      "reason": "Correct point labels and test both y=0 signs; retain rejection expectation for x=0/sign=1."
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-03.js",
+      "originalSha256": "6f8e7d1e57f8336be42935ffbce851824d1509f3085dfc3fe6e49dae1fadbb06",
+      "currentSha256": "97c1f7e7b9733f8b97c4dbd4a2027733d367ce402bb71c812f9384b72af045f4",
+      "reason": "Clamp the scalar before low-level ladder and decode expected RFC bytes as little-endian."
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-02.js",
+      "originalSha256": "e18283a52b059a991b197836081d151850d98fbbdf60390db6d7ebed1254bb7c",
+      "currentSha256": "593852ccb14dd37e14b91a8aa618e7c94c6ecdb39d591e5aa20746e5f02a17f9",
+      "reason": "Correct import and call spelling to hmacSha512Update; preserve existing vectors."
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-03.js",
+      "originalSha256": "28136f6fa4fac5d7d2beff827d674cfee5343b05459be906a481c231f439d7ec",
+      "currentSha256": "7a214c99158aab5afd1f5d0ffe893a5c943e4ac05c435d746414f2cb72566f00",
+      "reason": "Correct import and call spelling to hmacSha512Update; preserve existing vectors."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-03.js",
+    "exitCode": 0,
+    "output": "tests_passed.\n"
+  },
+  {
+    "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-01.js",
+    "exitCode": 0,
+    "output": "tests_passed.\n"
+  },
+  {
+    "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-03.js",
+    "exitCode": 0,
+    "output": "tests_passed.\n"
+  },
+  {
+    "path": "tests/crypto/sha512/HmacSha512FinishTest/test-02.js",
+    "exitCode": 0,
+    "output": "tests_passed.\n"
+  },
+  {
+    "path": "tests/crypto/sha512/HmacSha512FinishTest/test-03.js",
+    "exitCode": 0,
+    "output": "tests_passed.\n"
+  }
+]

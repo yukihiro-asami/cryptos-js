@@ -1,0 +1,45 @@
+import { poly1305State } from '../../../../src/crypto/chacha20poly1305/poly1305-state.js';
+import { poly1305Init } from '../../../../src/crypto/chacha20poly1305/poly1305-init.js';
+import { poly1305Update } from '../../../../src/crypto/chacha20poly1305/poly1305-update.js';
+import { poly1305Finish } from '../../../../src/crypto/chacha20poly1305/poly1305-finish.js';
+
+// 入力：Key（r || s）
+const key = Uint8Array.from([
+    0x85, 0xd6, 0xbe, 0x78, 0x57, 0x55, 0x6d, 0x33,
+    0x7f, 0x44, 0x52, 0xfe, 0x42, 0xd5, 0x06, 0xa8,
+    0x01, 0x03, 0x80, 0x8a, 0xfb, 0x0d, 0xb2, 0xfd,
+    0x4a, 0xbf, 0xf6, 0xaf, 0x41, 0x49, 0xf5, 0x1b
+]);
+
+// メッセージ
+const msg = Uint8Array.from([
+    0x43, 0x72, 0x79, 0x70, 0x74, 0x6f, 0x67, 0x72,
+    0x61, 0x70, 0x68, 0x69, 0x63, 0x20, 0x46, 0x6f,
+    0x72, 0x75, 0x6d, 0x20, 0x52, 0x65, 0x73, 0x65,
+    0x61, 0x72, 0x63, 0x68, 0x20, 0x47, 0x72, 0x6f,
+    0x75, 0x70
+]);
+
+// 期待されるタグ
+const expectedTag = Uint8Array.from([
+    0xa8, 0x06, 0x1d, 0xc1, 0x30, 0x51, 0x36, 0xc6,
+    0xc2, 0x2b, 0x8b, 0xaf, 0x0c, 0x01, 0x27, 0xa9
+]);
+
+// 実行
+const state = poly1305State();
+poly1305Init(state, key);
+poly1305Update(state, msg);
+
+const mac = new Uint8Array(16);
+poly1305Finish(state, mac);
+
+// 検証
+const match = expectedTag.every((b, i) => mac[i] === b);
+if (match) {
+    console.log("tests_passed.");
+} else {
+    console.error('RFC 8439 test vector FAILED.');
+    console.error('Expected:', Array.from(expectedTag).map(b => b.toString(16).padStart(2, '0')).join(' '));
+    console.error('Got     :', Array.from(mac).map(b => b.toString(16).padStart(2, '0')).join(' '));
+}

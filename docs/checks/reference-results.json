@@ -1,0 +1,1022 @@
+{
+  "node": "v24.22.1",
+  "platform": "darwin",
+  "arch": "arm64",
+  "total": 201,
+  "passed": 195,
+  "failed": 6,
+  "results": [
+    {
+      "path": "tests/curve25519/BaseRadix2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-2d.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-d.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-ed25519-y.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-l.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-minus-one.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-p.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/ClampTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-05.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/KeyPairTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/KeyPairTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-05.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-06.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/SlideVartimeTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/SlideVartimeTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-05.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-06.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-07.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519AddTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CMovTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CSwapTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CSwapTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CopyTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519FromBytesTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-03.js",
+      "passed": false,
+      "exitCode": null,
+      "output": "",
+      "error": "spawnSync /usr/local/bin/node ETIMEDOUT"
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519IsNegativeTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519IsZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519MulTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519NegTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519OneTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Pow22523Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ReduceTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ReduceTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Sq2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SqTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SqTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SubTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SubTest/test-trip-round.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Test/test-type-of.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-round-trip.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/EqualTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519AddCachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519AddPrecompTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519CachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519Cmov8BaseTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519Cmov8Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519CmovTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-03.js",
+      "passed": false,
+      "exitCode": 1,
+      "output": "Uint8Array(32) [\n   88, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102\n]\nUint8Array(32) [\n   88, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 102, 102, 102, 102,\n  102, 102, 102, 230\n]\nAssertion failed: Byte mismatch at index 31:\n  original=102\n  roundtrip=230\n"
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-01.js",
+      "passed": false,
+      "exitCode": 1,
+      "output": "Assertion failed: reject invalid encoding with high-bit set and non-square failed (ret=0)\n"
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519HasSmallOrderTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519HasSmallOrderTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519IsCanonicalTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1ToP2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1ToP3Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2DblTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2ToP3Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2ZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3AddTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3DblTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3Mul16Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3NegTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ReduceTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToCachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToP2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519PrecompTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519PrecompZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519ScalarmultBaseTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/ScalarToRadix16Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/ge25519/ScalarToRadix16Test/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519FromBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519IsCanonicalTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519MulAddTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519ReduceTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519ToBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/x25519/EdwardsToMontgomeryTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/x25519/EdwardsToMontgomeryTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-03.js",
+      "passed": false,
+      "exitCode": 1,
+      "output": "Assertion failed: Expected: c3da55379de9c6908e94ea4df28d084f32eccf03491c71f754b4075577a28552, got: 53c6fddfdb204112a0c63e4c484107210002f6e3d4cd3dae748750b08bc00b1e\n"
+    },
+    {
+      "path": "tests/curve25519/x25519/ScalarmultCurve25519Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/curve25519/x25519/ScalarmultCurve25519Test/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcChTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMSCHTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMajTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMajTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDrTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl0Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl0Test/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl1Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl1Test/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu0Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu0Test/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu1Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu1Test/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExpandTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExpandTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExtractTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-02.js",
+      "passed": false,
+      "exitCode": 1,
+      "output": "file:///Users/asamiyukihiro/Documents/GitHub/cryptos-js/tests/crypto/sha512/HmacSha512FinishTest/test-02.js:2\nimport { hmacSha512update } from '../../../../src/crypto/sha512/hmac-sha512-update.js';\n         ^^^^^^^^^^^^^^^^\nSyntaxError: The requested module '../../../../src/crypto/sha512/hmac-sha512-update.js' does not provide an export named 'hmacSha512update'\n    at #asyncInstantiate (node:internal/modules/esm/module_job:455:21)\n    at async ModuleJob.run (node:internal/modules/esm/module_job:553:5)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v24.22.1\n"
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-03.js",
+      "passed": false,
+      "exitCode": 1,
+      "output": "file:///Users/asamiyukihiro/Documents/GitHub/cryptos-js/tests/crypto/sha512/HmacSha512FinishTest/test-03.js:2\nimport { hmacSha512update } from '../../../../src/crypto/sha512/hmac-sha512-update.js';\n         ^^^^^^^^^^^^^^^^\nSyntaxError: The requested module '../../../../src/crypto/sha512/hmac-sha512-update.js' does not provide an export named 'hmacSha512update'\n    at #asyncInstantiate (node:internal/modules/esm/module_job:455:21)\n    at async ModuleJob.run (node:internal/modules/esm/module_job:553:5)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v24.22.1\n"
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512InitTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512StateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512UpdateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512FinalTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512InitTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512PadTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512PadTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512StateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512UpdateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512UpdateTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint64Array1024BETest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint8Array128BETest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint8Array512BETest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Word64AddTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Word64RotateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Word64ShiftTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/sha512/Word64XORTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/CalcQuarterRoundTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20EncryptBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptDetachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptDetachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaCtxTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaIvSetUpTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaIvSetUpTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaKeySetUpTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/CrampRTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305BlocksTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-03.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-04.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305InitTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305StateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305UpdateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint128LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint128LETest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint32LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array128LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array32LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array64LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Word32RotateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Word32RotateTest/test-02.js",
+      "passed": true,
+      "exitCode": 0
+    }
+  ]
+}
