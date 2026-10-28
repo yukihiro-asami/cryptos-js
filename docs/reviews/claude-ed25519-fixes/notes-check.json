@@ -1,0 +1,10 @@
+{
+  "documents": 7,
+  "localLinks": 182,
+  "bilingualEquationsSourcesTables": "matched",
+  "schnorrRecoveryChecks": 54,
+  "reciprocalBoundaryChecks": 6,
+  "sourceFilesCompared": 332,
+  "codeChanges": "one comment only; executable statements unchanged",
+  "reviewCopy": "byte-identical"
+}

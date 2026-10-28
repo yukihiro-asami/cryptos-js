@@ -1,0 +1,299 @@
+TAP version 13
+# Subtest: scalar multiply-add: canonical result at multiples of L and 256-bit boundaries
+not ok 1 - scalar multiply-add: canonical result at multiples of L and 256-bit boundaries
+  ---
+  duration_ms: 1.523
+  type: 'test'
+  location: '/private/tmp/cryptos-js-fixes.lGUG3B/tests/ed25519-arithmetic.test.mjs:60:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    a=1, b=1, c=7237005577332262213973186563042994240857116359379907606001950938285454250988
+    + actual - expected
+    
+    + 7237005577332262213973186563042994240857116359379907606001950938285454250989n
+    - 0n
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0n
+  actual: 7237005577332262213973186563042994240857116359379907606001950938285454250989n
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/tmp/cryptos-js-fixes.lGUG3B/tests/ed25519-arithmetic.test.mjs:69:16)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: Ed25519 signing: zero seed / 0c230000 produces canonical S and matches Node
+not ok 2 - Ed25519 signing: zero seed / 0c230000 produces canonical S and matches Node
+  ---
+  duration_ms: 7.913
+  type: 'test'
+  location: '/private/tmp/cryptos-js-fixes.lGUG3B/tests/ed25519-arithmetic.test.mjs:76:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    ... Skipped lines
+    
+      Buffer(64) [Uint8Array] [
+        61,
+        4,
+        119,
+        152,
+    ...
+        226,
+    +   142,
+    +   27,
+    -   161,
+    -   71,
+    -   86,
+    -   116,
+    -   239,
+    -   117,
+    -   20,
+    -   32,
+        76,
+    +   209,
+    +   9,
+    +   217,
+    +   38,
+    +   120,
+    +   34,
+    +   115,
+    +   99,
+    +   230,
+    +   128,
+    +   152,
+    +   240,
+    +   25,
+    -   214,
+    -   107,
+    -   67,
+    -   162,
+    -   158,
+    -   17,
+    -   5,
+        161,
+        35,
+        143,
+        155,
+        77,
+    ...
+        0,
+    +   16
+    -   0
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 61
+    1: 4
+    2: 119
+    3: 152
+    4: 34
+    5: 221
+    6: 209
+    7: 14
+    8: 213
+    9: 252
+    10: 247
+    11: 75
+    12: 242
+    13: 132
+    14: 233
+    15: 138
+    16: 113
+    17: 78
+    18: 236
+    19: 217
+    20: 76
+    21: 74
+    22: 170
+    23: 146
+    24: 125
+    25: 160
+    26: 235
+    27: 111
+    28: 17
+    29: 78
+    30: 105
+    31: 226
+    32: 161
+    33: 71
+    34: 86
+    35: 116
+    36: 239
+    37: 117
+    38: 20
+    39: 32
+    40: 76
+    41: 214
+    42: 107
+    43: 67
+    44: 162
+    45: 158
+    46: 17
+    47: 5
+    48: 161
+    49: 35
+    50: 143
+    51: 155
+    52: 77
+    53: 217
+    54: 109
+    55: 15
+    56: 56
+    57: 222
+    58: 210
+    59: 218
+    60: 12
+    61: 36
+    62: 0
+    63: 0
+  actual:
+    0: 61
+    1: 4
+    2: 119
+    3: 152
+    4: 34
+    5: 221
+    6: 209
+    7: 14
+    8: 213
+    9: 252
+    10: 247
+    11: 75
+    12: 242
+    13: 132
+    14: 233
+    15: 138
+    16: 113
+    17: 78
+    18: 236
+    19: 217
+    20: 76
+    21: 74
+    22: 170
+    23: 146
+    24: 125
+    25: 160
+    26: 235
+    27: 111
+    28: 17
+    29: 78
+    30: 105
+    31: 226
+    32: 142
+    33: 27
+    34: 76
+    35: 209
+    36: 9
+    37: 217
+    38: 38
+    39: 120
+    40: 34
+    41: 115
+    42: 99
+    43: 230
+    44: 128
+    45: 152
+    46: 240
+    47: 25
+    48: 161
+    49: 35
+    50: 143
+    51: 155
+    52: 77
+    53: 217
+    54: 109
+    55: 15
+    56: 56
+    57: 222
+    58: 210
+    59: 218
+    60: 12
+    61: 36
+    62: 0
+    63: 16
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/tmp/cryptos-js-fixes.lGUG3B/tests/ed25519-arithmetic.test.mjs:86:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P2 to P3: preserve the affine point and XY=ZT at non-unit Z, including in-place conversion
+not ok 3 - P2 to P3: preserve the affine point and XY=ZT at non-unit Z, including in-place conversion
+  ---
+  duration_ms: 0.623917
+  type: 'test'
+  location: '/private/tmp/cryptos-js-fixes.lGUG3B/tests/ed25519-arithmetic.test.mjs:93:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    extended invariant, z=2, inPlace=false
+    + actual - expected
+    
+    + 44274563071339673866853103496267025445963147114778508172218504697690990872872n
+    - 0n
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0n
+  actual: 44274563071339673866853103496267025445963147114778508172218504697690990872872n
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/tmp/cryptos-js-fixes.lGUG3B/tests/ed25519-arithmetic.test.mjs:104:16)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: Ed25519 cofactored verification: accept independently checked differences of order 1, 2, 4 and 8
+not ok 4 - Ed25519 cofactored verification: accept independently checked differences of order 1, 2, 4 and 8
+  ---
+  duration_ms: 9.026291
+  type: 'test'
+  location: '/private/tmp/cryptos-js-fixes.lGUG3B/tests/ed25519-arithmetic.test.mjs:143:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    difference order 8
+    
+    -1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: -1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/tmp/cryptos-js-fixes.lGUG3B/tests/ed25519-arithmetic.test.mjs:145:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: Ed25519 cofactored verification: still reject altered S/message and small-order public keys/R
+ok 5 - Ed25519 cofactored verification: still reject altered S/message and small-order public keys/R
+  ---
+  duration_ms: 16.268209
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 1
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1725.8615

@@ -1,0 +1,158 @@
+Reading the field and scalar arithmetic code now (skipping the large precomputed table).
+
+Found a candidate issue in the scalar Barrett reduction (`sc25519MulAdd` has no final conditional subtraction). Now reading the Ed25519/X25519 code paths to see whether it reaches signatures.
+
+I've identified two candidate bugs to verify: a missing final subtraction in `sc25519MulAdd`'s Barrett reduction, and `ge25519P2ToP3` setting T = X·Y without dividing by Z, which impacts the cofactor check. Next I'll check how the test harness API is used.
+
+Confirmed: `sc25519MulAdd` returns s ≥ L in ~59 of 2M random sign-range inputs. Now finding a concrete seed/message that produces such a signature end-to-end.
+
+Signing bug confirmed end-to-end. Now testing the verifier's cofactor handling with a mixed-order public key (A = [a]B + T₈).
+
+Verifier is neither cofactored nor cofactorless (accepts order 1/2/4 differences, rejects order 8). Confirming the root cause by patching `ge25519P2ToP3` in a temp copy.
+
+Root cause confirmed: with `ge25519P2ToP3` fixed, all four torsion classes are accepted (true cofactored behavior). Next, reading the SHA-512/HKDF/ChaCha20-Poly1305 sources.
+
+Hash/AEAD code read. Now running `npm test` (in the background — includes the ~42s million-iteration test) and a randomized differential fuzz against Node in parallel.
+
+Fuzz testing confirms X25519, SHA-512, HKDF, and AEAD all match Node across 300 cases each, including the silent zero-padding behavior for short ChaCha keys/nonces. Next, I'll review the Grok consultation record and sources.
+
+I've confirmed the existing tests actually bake in both bugs: Ge25519P2ToP3Test expects T = X·Y with Z=7, and Sc25519MulAddTest masks the non-canonical output by calling sc25519Reduce after sc25519MulAdd. Waiting for npm test to finish.
+
+`npm test` reproduced: 201/201, regression 6/6, interop 5/5, exit 0, working tree unchanged. Collecting exact line numbers for the report.
+
+# cryptos-js 公開前レビュー（対象commit `1786b02`）
+
+## 総合評価
+
+**現状のままの公開は勧めません。** Ed25519に計算上の不具合が2件あり、どちらも再現しました。
+
+- **署名側：** 正しくない署名を出力します（署名値 s が範囲外）。
+- **検証側：** 解説にある「余因子付き検証」と挙動が一致しません。
+
+どちらも原因は1〜3行の範囲です。一時コピーで修正を当てると、期待どおりに動くことも確認しました。
+
+それ以外はおおむね良好です。
+
+- X25519・SHA-512・HKDF・ChaCha20-Poly1305は、無作為入力でNode.jsと一致しました。
+- 解説の数学的な説明（8ℓ個の点と8つの剰余類、`[8]P∈H`、121666と121665の等価性、P1p1→P3の変換、シュノア署名→Ed25519の対応）は正確です。
+- X25519→シュノア署名→Ed25519という導入順も機能しています。
+- 今回の s の範囲検査の修正と、その回帰試験は妥当です。
+
+ただし既存の単体試験2件が、今回の2つの不具合を正しい動作として固定していました。201件成功という結果は、この2件を検出できない状態です。
+
+---
+
+## 1. 公開前に修正すべき具体的な問題
+
+### 1-1. 署名 s が ℓ 以上になる（Barrett還元の最終減算がない）【確認済み】
+
+- **箇所：** `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/curve25519/sc25519/sc25519-mul-add.js:4-5`
+- **根拠（確認）：**
+  - 定数 `B_REDUCTION_L_INVERSE` は `floor(2^520/ℓ)` と一致します。この還元方式では商が1少なくなる場合があり、出力は `[0, 2ℓ)` に入ります。それを `[0, ℓ)` に戻す条件付き減算がありません。
+  - 署名で実際に使う入力範囲（h<ℓ、クランプ後の a<2^255、r<ℓ）で200万回試したところ、**59件（約3.4万回に1件）が s≥ℓ** になりました。負の値は0件です。
+- **再現条件（確認）：** seed＝32バイトすべて0、メッセージ＝`0c230000`（4バイト）。
+  - `signDetached` の出力 s は「正しい値＋ℓ」になります。R の部分はNode.jsと同じです。
+  - 自前の `verifyDetached` は −1 を返し、Node.jsの `verify` は `false` を返します。
+  - Node.jsが作った署名は自前の検証で 0（成功）になります。
+- **影響：** 決定的な署名なので、該当する (seed, メッセージ) の組では常に無効な署名が出ます。RFC 8032 の出力とも一致しません。今回の範囲検査の修正が原因ではありません。この場合の s+ℓ は 2^255 未満なので、修正前の検査でも拒否されていました（推論）。
+- **対応：**
+  - `s.value = x - q * L;` の直後に `if (s.value >= L) s.value -= L;` を加えます。一時コピーで、上の再現例がNode.jsとバイト単位で一致し、自前の検証も 0 になることを確認しました。
+  - 試験の側も直します。`/Users/asamiyukihiro/Documents/GitHub/cryptos-js/tests/curve25519/sc25519/Sc25519MulAddTest/test-01.js:19` は `sc25519MulAdd` の後に `sc25519Reduce` を呼んでおり、これが不具合を隠しています。この呼び出しを削除し、`(ℓ−1)·(2^255−8)+c ≡ 0` になる入力を加えます。
+  - 上の再現ベクトルとNode.jsの比較を回帰試験に加えます。
+
+### 1-2. 検証が「余因子付き」になっていない（`ge25519P2ToP3` の T 計算）【確認済み】
+
+- **箇所：**
+  - `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/curve25519/ge25519/ge25519-p2-to-p3.js:5-8`
+  - 呼び出し元は `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/curve25519/ed25519/verify-detached.js:66-69`
+- **根拠（確認）：**
+  - 拡張座標の条件は `XY = ZT` です。この関数は Z をそのまま残し、`T = X·Y` としています。Z≠1 のとき条件が成り立ちません（確認スクリプトで false）。
+  - その結果、`R − Q` の加算で F と G の値が誤ります。E と H は T に依存しないため、誤りません。
+- **再現条件（確認）：** 公開鍵 A を `[a]B + T₈`（T₈ は位数8の点）として、正しく署名を64通り作りました。差 `[h]T₈` の位数ごとの受理結果は次のとおりです。
+
+| 差の位数 | 本実装 | Node.js | 本来の余因子付き検証 |
+|---|---|---|---|
+| 1 | 受理 | 受理 | 受理 |
+| 2 | 受理 | 拒否 | 受理 |
+| 4 | 受理 | 拒否 | 受理 |
+| 8 | **拒否** | 拒否 | 受理 |
+
+  - 一時コピーで `(X·Z, Y·Z, Z², X·Y)` に直すと、4種類すべてを受理しました。
+- **影響：**
+  - `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/docs/algorithms.md:240-246`（英語版も同じ箇所）の「8倍で消える差を許します」という説明と、実際の挙動が一致しません。現状は、余因子付きでも余因子なし（cofactorless）でもない判定です。
+  - 署名の偽造には使えないと考えます（推論）。誤った F と G が効くのは位数8の判定式だけで、そこで誤って受理されるには、偶然に有限体の等式が成り立つ必要があります。
+- **対応：**
+  - `ge25519P2ToP3` を上の式に直します。
+  - `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/tests/curve25519/ge25519/Ge25519P2ToP3Test/test-01.js:32` は `T=15`（Z=7 での X·Y）を期待値にしており、不具合を固定しています。条件 `XY≡ZT` で検査するように直します。
+  - 混合位数の公開鍵による回帰試験を追加します。
+  - 方針はどちらでもRFC 8032が許しているので、決めていただく必要があります。
+    - 余因子付き検証を維持する場合（推奨）：混合位数の公開鍵では、Node.js/OpenSSLと判定が異なることを解説に明記します。
+    - 余因子なしにする場合：R のバイト列比較に変更し、解説も書き換えます。
+
+### 1-3. 解説と検証記録の更新
+
+- **箇所：**
+  - `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/README.md:42-53`
+  - `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/docs/algorithms.md:314`
+  - 英語版の同じ箇所
+- **対応：** 1-1と1-2の修正後に件数と記録を更新します。あわせて「既存試験の2件が誤った期待値を持っていた」ことを記録します。今回の公開の目的（検証の能力を示すこと）から見ると、これは隠さず書く方が説得力があります。
+
+---
+
+## 2. 説明や使いやすさを改善する提案
+
+| # | 箇所 | 事実・根拠 | 提案 |
+|---|---|---|---|
+| a | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/curve25519/ed25519/sign-detached.js:40`、`/Users/asamiyukihiro/Documents/GitHub/cryptos-js/docs/algorithms.md:236` | 署名は `sk[32:64]` をそのまま公開鍵 A としてハッシュに入れ、seed から再計算しません（確認）。同じ seed とメッセージで A だけを変えて2回署名させると、r が同じで h が異なるので、`a=(s₁−s₂)/(h₁−h₂) mod ℓ` で秘密スカラが求まります（数学上の推論。実演はしていません）。 | 「sk の後半は対応する公開鍵でなければならない」と明記します。可能なら署名時に A を再計算するか照合します。 |
+| b | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/crypto/chacha20poly1305/chacha-iv-set-up.js:4-6`、`/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/crypto/chacha20poly1305/chacha-key-set-up.js` | 16バイトの鍵と8バイトのnonceで暗号化が成功（0）し、0で埋めた32バイト鍵・12バイトnonceと同じ出力になりました（確認）。不適切な入力をそのまま受理しています。 | 長さが違えば −1 を返します（`verifyDetached` の長さ検査と揃える）。 |
+| c | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/crypto/sha512/hkdf-sha512-expand.js:24` | 16320バイトを超えると連番が0に戻り、規格外の出力を黙って返します（確認）。解説には書かれています。 | 1行の検査で拒否できます。解説の「呼び出し側の責任」を減らせます。 |
+| d | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/docs/algorithms.md:117` | 小位数の u（例：u=0）では本実装は 0n を返し、Node.jsは例外を投げます（確認）。RFC 7748 §6.1 では、全ゼロ出力の検査は任意です。 | 全ゼロ検査が呼び出し側の責任であることを明記します。さらに「下位3ビットを0にする＝8の倍数にする」ことを、§2の余因子8の説明に結び付けると、クランプの理由が読み手につながります。 |
+| e | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/curve25519/x25519/scalarmult-curve25519-base.js:9` | 基点用の関数だけが、入力をBigInt（little-endianで解釈した値）で受け取ります。もう一方の関数はバイト列で受け取ります。 | 入力形式の違いを解説の表に書きます。利用例の工程で、RFC 7748と同じ「32バイト入出力」に揃えることを検討します。 |
+| f | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/docs/algorithms.md:187` | 「r を使い回さない」とだけ書かれています。 | 同じ r を2回使うと `a=(s₁−s₂)(h₁−h₂)⁻¹` で秘密鍵が求まることを1行で示します。Ed25519が r を決定的に作る理由がこれで説明できます。 |
+| g | 解説全体 | スカラの還元（Barrett法、`B_REDUCTION_L_INVERSE`）の説明がありません。1-1はここで起きました。 | 有限体の解説と同じ形で、短い節を加えます。Barrett法では最後に条件付き減算が必要なことも書きます（Handbook of Applied Cryptography の Algorithm 14.42 が出典候補ですが、該当箇所は未確認です）。 |
+| h | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/curve25519/ed25519/verify-detached.js:60` | コメント「R = [h]A + [-S]B」は、実際の計算 `[h](−A)+[S]B` と一致しません。 | コメントを修正します。 |
+| i | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/crypto/chacha20poly1305/chacha20-encrypt-bytes.js:19-28,51` | `mblock`・`cblock` は使われていません。最後の不完全なブロックでは配列の範囲外を読み、undefined が0として扱われることで結果が正しくなっています。 | 読み手が混乱するので、`tmp` から読む形に整理します。 |
+| j | `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/docs/bigint-field-arithmetic.md:49` | 二乗は入力も折りたたみますが、乗算は入力を折りたたみません。その理由が書かれていません。 | 理由を一文加えるか、非対称であることを明記します。 |
+
+**過去のGrok諮問への独立評価：** 記録にある修正点1〜5はすべて妥当で、同意します。
+
+- Grokの「入力が非負なら出力も非負」は正しいです。「負の値で前提が崩れる」という懸念は、修正点3で正しく退けられています。
+- 「BigIntの乗算コストを抑える」は未測定です。解説はこれを未測定と書いており、適切です。
+- Crandall という名称は、文献では p=2^q−C 型の高速還元の呼び名として使われることがあります（出典候補は Crandall の米国特許 5,159,632、1992年。未確認）。確定記述にしない判断は保守的で問題ありません。
+- この諮問はスカラ還元を対象にしていません。そのため、1-1の不具合を見つけられなかったことは諮問の欠陥ではありません。ただし、諮問結果を実装全体の検証済み根拠として読まれないようにする注意は必要です。
+
+---
+
+## 3. 予定済みの後続工程で扱えばよい事項
+
+- **利用例の工程：** X25519は32バイトのバイト列で入出力する包み関数にし、全ゼロ出力の検査例を示します。ChaCha20-Poly1305の出力バッファ長の検査例も加えます。
+- **ChaCha20の連番の桁あふれ：** `/Users/asamiyukihiro/Documents/GitHub/cryptos-js/src/crypto/chacha20poly1305/chacha20-encrypt-bytes.js:64` では、連番があふれると nonce の語に繰り上がります。256GiBを超える入力でだけ起きるので、現実の影響は低いと考えます（推論）。利用例の工程で上限を明記してください。
+- **タグ比較の早期終了と、BigIntの非定時間性：** 既に明記されているので、追加の対応は不要です。
+- **ブラウザでの確認とライセンス：** 予定どおり後続工程で扱えば十分です。
+
+---
+
+## 実施した範囲
+
+**読んだもの：**
+- AGENTS.md、CLAUDE.md、README.md、`docs/algorithms.md`（全文）、`docs/bigint-field-arithmetic.md`（全文）、今回のPLAN（全文）、`grok-reduction.md`、`checks/sources.md`
+- 英語版は、X25519の節・シュノア署名の節・検証の節を日本語版と照合しました（一部分）。
+- 実装：`fe25519`・`sc25519` の全関数、Ed25519とX25519の全入口、主要な `ge25519` 関数（復元・加算・倍算・基点倍算・小位数判定・座標変換）、SHA-512・HMAC・HKDFの主要部分、ChaCha20-Poly1305の全ファイル
+- 試験：`interop`・`signature-scalar` の各試験、単体試験2件
+
+**実行した検証（Node.js v24.22.1）：**
+- `npm test`：終了コード0。既存201/201、100万回試験42.6秒、回帰6/6、相互運用5/5。記録どおり再現しました。
+- 上記の再現スクリプト：Barrett還元の検査、署名の探索、余因子の分類
+- 一時コピーでの修正の確認
+- Node.jsとの差分試験：X25519 300件（最上位ビット付き u と非正規の u を含む）、SHA-512・HKDF・AEAD 各400/400/300件。一致しなかったのは、小位数の u でNode.jsが例外を投げた10件だけです。
+- リポジトリは変更していません（`git status` は空のままです）。スクリプトは `/private/tmp/claude-502/-Users-asamiyukihiro-dev-claude-projects/3978e100-0072-474e-8e1c-0279f0850a46/scratchpad/` にあります。
+
+**未確認のもの：**
+- `const.js` の事前計算表の個々の値（相互運用試験を通じて間接的にのみ確認）
+- 201件の個別の試験ファイル（上記2件以外）
+- `sequence-math.mjs`・`sequence-docs.py` などの確認スクリプト本体
+- `source-manifest.json`・`source-changes.json`・`import-report.md`・過去のPLAN
+- `bigint-field-arithmetic.en.md` と `README.en.md` の全文照合
+- 外部の一次資料の再閲覧（RFCの節の対応は、記憶とコードで照合しました）
+
+1-1と1-2の修正は、どちらも1〜3行の変更と、試験の期待値の訂正で済みます。

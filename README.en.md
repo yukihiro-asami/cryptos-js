@@ -14,7 +14,7 @@ Field arithmetic is expressed directly with BigInt, with established reduction m
 |---|---|
 | X25519 → Schnorr → Ed25519, from finite fields and subgroups to internal computations | [From equations to code](docs/algorithms.en.md) |
 | BigInt folding, partial reduction before squaring, and normalization boundaries | [BigInt field arithmetic](docs/bigint-field-arithmetic.en.md) |
-| Which inputs were tested, how they were compared, and the results | [Import and verification record](docs/import-report.md), [latest work record](docs/plans/20261028-01-public-explanations/PLAN.md) (Japanese) |
+| Which inputs were tested, how they were compared, and the results | [Import and verification record](docs/import-report.md), [latest fixes and verification](docs/reviews/claude-ed25519-fixes.md) (Japanese) |
 | Function calls and comparisons with an independent implementation | [Interoperability tests](tests/interop.test.mjs) |
 
 Explanations are available in Japanese and English. Each guide links to the corresponding code and primary sources.
@@ -44,7 +44,7 @@ On 2026-10-28, all of the following passed on Node.js v24.22.1 / macOS arm64:
 | Check | Result |
 |---|---|
 | Selected existing tests | 201/201 passed, including a million-case field-inversion sweep |
-| Added regressions | 6/6 groups passed: four point-decoding groups and two signature-scalar range groups |
+| Added regressions | 11/11 groups passed: four point-decoding groups, two signature-scalar range groups, and five arithmetic/conversion/signature regression groups |
 | Comparison with Node.js cryptography | 5/5 groups passed, comparing public keys, signatures, shared secrets, digests, derived material, ciphertexts, and tags |
 | Provenance and dependencies | Hashes of 324 files and local import references checked |
 

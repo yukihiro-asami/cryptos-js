@@ -57,7 +57,7 @@ export function verifyDetached(sig, m, pk) {
     sc25519FromBytes(h, hBytes);
     sc25519ToBytes(hScBytes, h);
 
-    // R = [h]A + [-S]B を計算し expectedR と比較
+    // Aは−Aとして復元済み。Q = [S]B − [h]Aを計算し、R − Qの小位数を調べる。
     const sb_ah_p2 = ge25519P2();
     const sb_ah = ge25519P3();
     const check = ge25519P3();

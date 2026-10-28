@@ -1,7 +1,6 @@
 import { sc25519 } from '../../../../src/curve25519/sc25519/sc25519.js';
 import { sc25519MulAdd } from '../../../../src/curve25519/sc25519/sc25519-mul-add.js';
 import { L } from '../../../../src/curve25519/const.js';
-import {sc25519Reduce} from "../../../../src/curve25519/sc25519/sc25519-reduce.js";
 
 let allPassed = true;
 
@@ -16,7 +15,6 @@ function testCase(label, aVal, bVal, cVal, expectedVal) {
     c.value = cVal;
 
     sc25519MulAdd(s, a, b, c);
-    sc25519Reduce(s);
 
     const passed = s.value === expectedVal;
     if (!passed) {
@@ -25,9 +23,11 @@ function testCase(label, aVal, bVal, cVal, expectedVal) {
     }
 }
 
+// Compare the raw output: normalizing here would hide a missing final reduction.
 // === テストケース ===
 testCase("0 * 0 + 0", 0n, 0n, 0n, 0n);
 testCase("1 * 1 + 0", 1n, 1n, 0n, 1n);
+testCase("1 * 1 + L-1", 1n, 1n, L - 1n, 0n);
 testCase("2 * 3 + 1", 2n, 3n, 1n, 7n);
 testCase("L-1 * 1 + 0", L - 1n, 1n, 0n, L - 1n);
 testCase("L-1 * L-1 + 0", L - 1n, L - 1n, 0n, 1n);

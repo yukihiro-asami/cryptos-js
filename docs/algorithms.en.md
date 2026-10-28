@@ -114,13 +114,15 @@ u_A=\operatorname{X25519}(a,9),\quad u_C=\operatorname{X25519}(b,9),\quad
 z=\operatorname{X25519}(a,u_C)=\operatorname{X25519}(b,u_A)
 $$
 
-The actual function takes byte strings. [scalarmultCurve25519](../src/curve25519/x25519/scalarmult-curve25519.js) clears the scalar's lowest three bits and its highest bit, then sets the next-highest bit. It returns the u-coordinate as a BigInt. Conversion to 32 little-endian bytes appears in the [interoperability tests](../tests/interop.test.mjs). Deriving an application key from the shared secret is outside this function. [RFC 7748 §5 and §6.1](https://www.rfc-editor.org/rfc/rfc7748.html#section-5)
+The actual function takes byte strings. [scalarmultCurve25519](../src/curve25519/x25519/scalarmult-curve25519.js) clears the scalar's lowest three bits and its highest bit, then sets the next-highest bit. Clearing the lowest three bits makes the scalar a multiple of 8. It returns the u-coordinate as a BigInt. Conversion to 32 little-endian bytes appears in the [interoperability tests](../tests/interop.test.mjs). Deriving an application key from the shared secret is outside this function. [RFC 7748 §5 and §6.1](https://www.rfc-editor.org/rfc/rfc7748.html#section-5)
 
 ### Two computation paths in this implementation
 
 For a peer's public value, `scalarmultCurve25519` uses the [Montgomery ladder](../src/curve25519/x25519/montgomery-ladder.js). It retains two projective points, reads 255 scalar bits from high to low, and combines swaps, differential addition, and doubling. It normalizes coordinates after each iteration and recovers u by inversion at the end.
 
 The [base-point function](../src/curve25519/x25519/scalarmult-curve25519-base.js) instead adjusts a BigInt input, reduces it modulo ℓ, and uses fixed-base multiplication in Edwards coordinates. It then calls [edwardsToMontgomery](../src/curve25519/x25519/edwards-to-montgomery.js) to compute `u = (1+y)/(1−y)`. The base point's y-coordinate is 4/5, giving u=9. This path reuses the existing fixed-base multiplication rather than passing u=9 directly to the ladder.
+
+> Note: the general function takes 32-byte inputs; the base-point function takes a BigInt interpreting those bytes in little-endian order. Both return a BigInt. The general function returns an all-zero shared secret as `0n`, leaving the all-zero check for key agreement to the caller.
 
 The ladder's `MONTGOMERY_A24 = 121666` and the RFC's `121665` correspond through the whole formula. With `E = AA − BB`:
 
@@ -186,6 +188,8 @@ $$
 
 Exponents can be reduced modulo n because `g^n = 1`. Verification does not require a or r; changing m also changes the hash input. The secret r is generated securely for each signature and is not reused across different messages.
 
+> Note: reusing r with distinct h₁ and h₂ reveals the secret scalar through `a = (s₁−s₂)(h₁−h₂)⁻¹ mod n`. Regenerating the same signature for the same message and key is a different case.
+
 These equations explain Schnorr-type signatures; this repository does not add an integer-group implementation. The correspondence between finite-field and curve forms, and the use of hashing to derive a challenge, can be followed in [Hao, RFC 8235 §2 and §3](https://www.rfc-editor.org/rfc/rfc8235.html#section-2). That RFC describes a proof of knowledge with a subtractive response. Here the presentation uses a message-bound signature form and the additive convention `s = r + ha` to connect to Ed25519.
 
 ## 4. Ed25519: expressing the Schnorr structure with curve points
@@ -235,6 +239,8 @@ The implementation covers Ed25519 without the prehash or context variants. It ha
 
 `LE` interprets bytes in little-endian order; `LE32` encodes an integer into 32 little-endian bytes. Point encoding `enc` stores the y-coordinate and the sign bit of x in 32 bytes. The 64-byte `sk` produced by `keyPair` contains `seed || public key`, rather than a itself. Signing recomputes a and the prefix from the seed. Callers provide randomness and key storage.
 
+> Note: pass the `sk` produced by `keyPair` to `signDetached`. Its last 32 bytes must be the public key corresponding to the seed. Signing does not recheck that correspondence; do not replace only the public-key half.
+
 ### Verification and the negated point
 
 `verifyDetached` checks lengths, the range of s, and point encodings, then decodes the public key as **−A**. [doubleScalarmultVartime](../src/curve25519/ed25519/double-scalarmult-vartime.js) uses that point to compute `Q = [s]B − [h]A`. The final check asks whether `R − Q` becomes the identity when multiplied by 8:
@@ -246,6 +252,8 @@ $$
 This cofactored verification allows a difference that vanishes under multiplication by 8. When the public key and R belong to the subgroup of ℓ points, it agrees with the earlier relation `[s]B = R + [h]A`. [ge25519HasSmallOrder](../src/curve25519/ge25519/ge25519-has-small-order.js) performs the small-order test. The input public key and R are also checked to reject small-order points. Verification returns 0 for success and −1 for failure. [RFC 8032 §5.1.7](https://www.rfc-editor.org/rfc/rfc8032.html#section-5.1.7)
 
 The range check must **read all 32 bytes and verify `0 ≤ s < ℓ`**. It cannot reuse the removal of the top bit performed when reading a coordinate. An inconsistency found while preparing this guide, and its minimal correction, are recorded in the [execution plan](plans/20261028-01-public-explanations/PLAN.md). The guide's h and s correspond to k and S in the RFC; code names include `hram`, `h`, and `S`. The explanatory notation does not rename code identifiers.
+
+> Note: acceptance can differ from the tested Node.js v24.22.1 for public keys with a component outside the prime-order subgroup. The [regression cases](../tests/ed25519-arithmetic.test.mjs) with a verification residual of order 2, 4, or 8 are accepted here and rejected by Node.js. These cases are separate from interoperability tests using normally generated keys.
 
 ## 5. Coordinate representations: from two variables to three or four
 
@@ -279,6 +287,8 @@ The implementation then uses `2^255 ≡ 19 (mod p)` to fold the high part back i
 
 For nonzero z, [fe25519Invert](../src/curve25519/fe25519/fe25519-invert.js) computes `z^(p−2)` through a fixed sequence of squarings and multiplications that reuses intermediate powers. The source expresses how to build the required exponent instead of calling a generic large-exponent operation.
 
+For scalar arithmetic, [sc25519MulAdd](../src/curve25519/sc25519/sc25519-mul-add.js) precomputes `μ = floor(2^520/ℓ)` and approximates the quotient of `x = ha+r` by `floor(xμ/2^520)`. If the remainder is still at least ℓ, it subtracts ℓ to obtain `0 ≤ s < ℓ`. This follows the reciprocal-approximation idea of Barrett reduction. It multiplies whole BigInts rather than directly implementing the textbook procedure that omits some digits. [Menezes, van Oorschot, and Vanstone, Handbook of Applied Cryptography §14.3.3](https://cacr.uwaterloo.ca/hac/about/chap14.pdf)
+
 ## 7. SHA-512 and HKDF-SHA-512
 
 ### Building the hash from blocks
@@ -307,11 +317,13 @@ The blocks are concatenated and truncated to the requested length. In [hkdfSha51
 
 The [AEAD implementation](../src/crypto/chacha20poly1305/chacha20poly1305-encrypt-detached.js) uses a 32-byte key and 12-byte nonce. Counter 0 supplies the Poly1305 key; counters starting at 1 encrypt the plaintext. The authenticated input contains AAD, padding, ciphertext, padding, and their lengths, producing a 16-byte tag. AAD is authenticated but unencrypted information. Callers manage nonce uniqueness for each key. [Nir and Langley, RFC 8439 §2.3, §2.5, and §2.8](https://www.rfc-editor.org/rfc/rfc8439.html#section-2.8)
 
+> Note: callers check the 32-byte key, 12-byte nonce, and required output-buffer size. The current API does not guarantee rejection of incorrect lengths. The per-invocation plaintext limit is `(2^32−1) × 64` bytes.
+
 [Decryption](../src/crypto/chacha20poly1305/chacha20poly1305-decrypt-detached.js) computes and compares the tag before writing plaintext. A mismatch returns −1. The [combined-format entry](../src/crypto/chacha20poly1305/chacha20poly1305-encrypt.js) writes `ciphertext || tag`. Tag comparison exits early on a mismatch and is also outside any constant-time guarantee.
 
 ## 9. Verification and further reading
 
-The [previous verification record](plans/20261028-00-resolve-reference-tests/PLAN.md) reports 201 existing tests, four point-decoding regression groups, and five algorithm groups compared with Node.js, all passing. The million-case sweep covers field inversion; it does not mean that all inputs to all algorithms have been tested. The added s-range check and the full rerun are recorded in [this work's plan](plans/20261028-01-public-explanations/PLAN.md).
+The current results are 201 existing tests, 11 regression groups, and five algorithm groups compared with Node.js, all passing. The [latest fixes and verification](reviews/claude-ed25519-fixes.md) record the multiply-add and coordinate-conversion bugs found in review, including corrections to the existing tests that missed them. The million-case sweep covers field inversion; it does not mean that all inputs to all algorithms have been tested. The earlier s-range correction is in the [public-explanation work record](plans/20261028-01-public-explanations/PLAN.md).
 
 The implementation demonstrates small functions that expose mathematical structure, choices of coordinates and integer representations, and established arithmetic adapted to BigInt. JavaScript BigInt does not guarantee constant-time execution, so this reference implementation does not guarantee side-channel resistance. Agreement with independent implementations on tested inputs, specification checks, and implementation choices are reported separately.
 

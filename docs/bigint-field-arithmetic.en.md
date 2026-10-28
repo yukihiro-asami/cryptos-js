@@ -48,6 +48,8 @@ export function fe25519Sq(h, f) {
 
 The folded and original inputs are congruent modulo p, so their squares are also congruent. When an input has grown large, this arrangement avoids immediately squaring that large value. We have not established a separate name for this particular arrangement.
 
+> Note: multiplication folds only the product, not its inputs. Its arrangement differs from squaring; neither optimality nor a performance advantage of this difference has been established.
+
 BigInt lets the source express multiplication and shifts on one integer. A fixed-width limb representation also needs explicit digit arithmetic and carry handling. Both implement field arithmetic, but their operations and costs are not identical. This code chooses to manage intermediate sizes around arbitrary-precision arithmetic. The speed benefit of this folding step alone has not been measured.
 
 ## Partial reduction and lazy reduction

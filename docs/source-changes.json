@@ -55,9 +55,44 @@
     {
       "path": "src/curve25519/ed25519/verify-detached.js",
       "originalSha256": "35a8bc9e03ea2c9c77f954146cc8560d6b7ed1081a811840cd762e11d287831c",
-      "currentSha256": "04e0097170744ddc60186e72b0c6d237cc67a395700bf00879e3934242629e37",
+      "currentSha256": "769e2888d038dbdfc0218b12d48fc264f41ffea0a7eb2f2b2622f1a0cb6959c5",
       "plan": "20261028-01-public-explanations",
-      "reason": "Decode all 32 scalar bytes without masking bit 255 before enforcing S < L (RFC 8032 section 5.1.7); reject S+8L alternate signature encodings."
+      "reason": "Decode all 32 scalar bytes without masking bit 255 before enforcing S < L (RFC 8032 section 5.1.7); reject S+8L alternate signature encodings.",
+      "updates": [
+        {
+          "previousSha256": "04e0097170744ddc60186e72b0c6d237cc67a395700bf00879e3934242629e37",
+          "record": "docs/reviews/claude-ed25519-fixes.md",
+          "reason": "Correct the verification comment to Q=[S]B-[h]A and the small-order test of R-Q; executable statements are unchanged."
+        }
+      ]
+    },
+    {
+      "path": "src/curve25519/sc25519/sc25519-mul-add.js",
+      "originalSha256": "86d9fb7c5bddc74309c8e935e60efc5995cf4feedfcaeba96017828f17f3ab90",
+      "currentSha256": "f3b744ca8fecebadd6b333411958872574d53f8a92db31ab5aab90394489a6e8",
+      "record": "docs/reviews/claude-ed25519-fixes.md",
+      "reason": "Finish reciprocal-based reduction with one conditional subtraction so S is in [0,L); the zero-seed/0c230000 signature previously produced S+L."
+    },
+    {
+      "path": "src/curve25519/ge25519/ge25519-p2-to-p3.js",
+      "originalSha256": "968dcdb9f69c676f96642a04517b599ad882465309e42b453d6bd99825466b38",
+      "currentSha256": "643ac338883c0a8444e985e6bd2fba0469e5e4b4954432f52cc7c3aefca2f0cd",
+      "record": "docs/reviews/claude-ed25519-fixes.md",
+      "reason": "Convert (X,Y,Z) to (XZ,YZ,Z^2,XY), preserving the affine point and XY=ZT; fixes rejection of order-8 residuals in cofactored verification."
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519MulAddTest/test-01.js",
+      "originalSha256": "71ba745bf47cf06988e656e21ccded1871ab1e71ddc9208a74da96495e9a4959",
+      "currentSha256": "d4bcca986ce2a8db90a4ba8b4a8f707cf57e8054312bfb506b7d272b76d3f855",
+      "record": "docs/reviews/claude-ed25519-fixes.md",
+      "reason": "Check the multiply-add output directly without sc25519Reduce masking non-canonical results; add an exact multiple-of-L boundary."
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2ToP3Test/test-01.js",
+      "originalSha256": "988fbf2491c8c0ad15e8914451c02457a1f625926289ca86fe94eff999286beb",
+      "currentSha256": "76274901b737df1434cfe4fad45a5913e4f2a484fd04fde0f152f21ebd67a173",
+      "record": "docs/reviews/claude-ed25519-fixes.md",
+      "reason": "Replace expectations for incorrect coordinate copying with affine equivalence and XY=ZT checks using the scaled Ed25519 base point."
     }
   ]
 }
