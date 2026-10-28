@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Handwritten JavaScript cryptographic reference implementations by Yukihiro Asami",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "engines": {
     "node": ">=24"
   },
@@ -16,5 +16,10 @@
     "test:regression": "node --test tests/point-decoding.test.mjs tests/signature-scalar.test.mjs tests/ed25519-arithmetic.test.mjs",
     "examples": "node examples/node.mjs",
     "examples:browser": "node scripts/serve-examples.mjs"
+  },
+  "author": "Yukihiro Asami",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yukihiro-asami/cryptos-js.git"
   }
 }

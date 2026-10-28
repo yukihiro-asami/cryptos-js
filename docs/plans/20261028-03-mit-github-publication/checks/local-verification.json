@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "node": "v24.22.1",
+  "licenseBodyMatchesGitHubTemplate": true,
+  "imports": {
+    "filesVerified": 324,
+    "originalMatches": 311,
+    "recordedChanges": 13,
+    "localImportsResolved": 881
+  },
+  "examples": {
+    "passed": 6,
+    "total": 6,
+    "checks": 24
+  },
+  "scope": {
+    "trackedFilesUnchanged": 397,
+    "changedTrackedFiles": [
+      "README.en.md",
+      "README.md",
+      "package.json"
+    ],
+    "readmeLinkCounts": {
+      "README.md": 33,
+      "README.en.md": 33
+    },
+    "packageLicense": "MIT",
+    "npmPrivate": true
+  },
+  "existingCryptoTests": "Prior successful regression, interoperability, browser, and million-case results retained; cryptographic code, tests, and examples unchanged."
+}

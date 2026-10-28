@@ -4,7 +4,7 @@
 
 **暗号アルゴリズムを、数式からバニラJavaScriptの実装まで。**
 
-浅見幸宏による、Ed25519・X25519・SHA-512・HKDF-SHA-512・ChaCha20-Poly1305の参照実装集です。スクラッチから書いた計算処理と解説を通じて、アルゴリズムを理解し、自ら実装・検証する技術を示します。
+[浅見幸宏](https://github.com/yukihiro-asami)による、Ed25519・X25519・SHA-512・HKDF-SHA-512・ChaCha20-Poly1305の参照実装集です。スクラッチから書いた計算処理と解説を通じて、アルゴリズムを理解し、自ら実装・検証する技術を示します。
 
 有限体演算はBigIntで直接表現し、既知の還元手法を中間値の大きさに合わせて配置しています。署名では座標変換と事前計算表を使い、SHA-512では64ビット語をBigInt、ChaCha20では32ビット語をNumberと型付き配列で扱います。それぞれの選択をコードに結び付けて説明しています。
 
@@ -33,9 +33,11 @@
 
 ## 動かして読む
 
-Node.js 24以降。インストール・ビルドは不要です。リポジトリのルートで実行します。
+Node.js 24以降。依存パッケージのインストール・ビルドは不要です。リポジトリを取得して実行します。
 
 ```sh
+git clone https://github.com/yukihiro-asami/cryptos-js.git
+cd cryptos-js
 npm run examples
 npm run examples -- ed25519
 npm run examples -- combined
@@ -101,4 +103,10 @@ npm test
 
 元資産はrainfrog_truthのfrog/workerです。[出典台帳](docs/source-manifest.json)に元パス・commit・ハッシュ、[変更台帳](docs/source-changes.json)に取り込み後の修正理由とハッシュを残しています。[Grokの諮問原文と修正点](docs/reviews/grok-reduction.md)も保存しています。
 
-現在はGitHub公開の準備段階です。Node.jsでの検証、日英の解説、独立した利用例、Safari・Chromeでの確認を終えています。ライセンス等の公開条件の整備とGitHub公開が後続工程です。ライセンスは未選定で、npm公開は無効にしています。
+Claudeによる指摘から再現・数学的な根拠・修正・回帰試験までを[レビュー対応記録](docs/reviews/claude-ed25519-fixes.md)に、修正後の[Grokの再評価](docs/reviews/grok-public-review.md)も別に残しています。各モデルの報告と、このリポジトリで実行して確認した結果は区別しています。
+
+## ライセンス・著者
+
+[MIT License](LICENSE)。Copyright (c) 2025-2026 Yukihiro Asami（浅見幸宏）。
+
+ソース、解説、利用例と検証記録は[GitHubリポジトリ](https://github.com/yukihiro-asami/cryptos-js)にまとめています。npmパッケージとしての配布は行っていません。

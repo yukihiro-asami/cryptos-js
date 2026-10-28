@@ -1,0 +1,23 @@
+{
+  "baseCommit": "66da03cd6b6d8480db5c575e58dccd7376178ee9",
+  "commitsReviewed": 4,
+  "uniqueBlobsReviewed": 422,
+  "textBlobs": 421,
+  "historicalPaths": 400,
+  "binaryPaths": [
+    "docs/plans/20261028-02-examples-browser-validation/checks/browser-examples.png"
+  ],
+  "credentialPatternHits": [],
+  "sensitiveFileNameHits": [],
+  "githubOwner": "yukihiro-asami",
+  "repository": "cryptos-js",
+  "sourceEarliestCommit": "7a8fec9",
+  "sourceEarliestDate": "2025-05-12",
+  "sourceAuthor": "yukihiro-asami",
+  "copyright": "2025-2026 Yukihiro Asami",
+  "license": "MIT",
+  "licenseSource": "https://opensource.org/license/mit",
+  "binaryReview": "The sole image is the examples page with public test fixtures; visually inspected.",
+  "provenanceReview": "Imported assets trace to the author-owned rainfrog_truth tree. No conflicting license notices found in selected code or source repository root. Existing primary-source references and review records retained.",
+  "scanScope": "Filename and credential-pattern checks over all 4 reachable commits, plus provenance and example image review; not an exhaustive proof of absence."
+}

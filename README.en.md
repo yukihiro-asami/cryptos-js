@@ -4,7 +4,7 @@
 
 **Cryptographic algorithms, from equations to vanilla JavaScript.**
 
-Handwritten reference implementations of Ed25519, X25519, SHA-512, HKDF-SHA-512, and ChaCha20-Poly1305 by Yukihiro Asami. The code and explanations demonstrate understanding of the algorithms and the ability to implement and verify their computations from scratch.
+Handwritten reference implementations of Ed25519, X25519, SHA-512, HKDF-SHA-512, and ChaCha20-Poly1305 by [Yukihiro Asami](https://github.com/yukihiro-asami). The code and explanations demonstrate understanding of the algorithms and the ability to implement and verify their computations from scratch.
 
 Field arithmetic is expressed directly with BigInt, with established reduction methods placed to control intermediate sizes. Signatures use coordinate conversions and precomputed tables. SHA-512 uses BigInt for 64-bit words; ChaCha20 uses Number and typed arrays for 32-bit words. The explanations connect these choices to the actual code.
 
@@ -33,9 +33,11 @@ The cryptographic computations are JavaScript ES modules, without delegation to 
 
 ## Run and read
 
-Use Node.js 24 or later. No installation or build is required. Run from the repository root:
+Use Node.js 24 or later. No dependency installation or build is required. Clone the repository and run:
 
 ```sh
+git clone https://github.com/yukihiro-asami/cryptos-js.git
+cd cryptos-js
 npm run examples
 npm run examples -- ed25519
 npm run examples -- combined
@@ -101,4 +103,10 @@ The guides distinguish mathematical definitions, prior techniques, and implement
 
 The original assets came from rainfrog_truth's frog/worker tree. The [source manifest](docs/source-manifest.json) records original paths, commit, and hashes. The [change log](docs/source-changes.json) records post-import modifications and hashes. The [Grok response and corrections](docs/reviews/grok-reduction.md) are also preserved in Japanese.
 
-The project is being prepared for GitHub publication. Node.js verification, bilingual explanations, standalone examples, and checks in Safari and Chrome are complete. Publication conditions, including license selection, and GitHub publication are next. A license has not yet been selected, and npm publication is disabled.
+The [review response record](docs/reviews/claude-ed25519-fixes.md) follows Claude's findings through reproduction, mathematical reasoning, fixes, and regression tests. [Grok's subsequent review](docs/reviews/grok-public-review.md) is preserved separately. Both records are in Japanese and distinguish the models' reports from checks executed in this repository.
+
+## License and author
+
+[MIT License](LICENSE). Copyright (c) 2025-2026 Yukihiro Asami.
+
+Source, explanations, examples, and verification records are available in the [GitHub repository](https://github.com/yukihiro-asami/cryptos-js). The project is not distributed as an npm package.
