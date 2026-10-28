@@ -1,0 +1,42 @@
+{
+  "repository": "https://github.com/yukihiro-asami/cryptos-js",
+  "anonymousHttpUrls": [
+    "https://github.com/yukihiro-asami/cryptos-js",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/README.md",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/README.en.md",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/LICENSE",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/docs/algorithms.md",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/docs/algorithms.en.md",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/docs/bigint-field-arithmetic.md",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/docs/bigint-field-arithmetic.en.md",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/examples/node.mjs",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/examples/browser/index.html",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/docs/reviews/claude-ed25519-fixes.md",
+    "https://raw.githubusercontent.com/yukihiro-asami/cryptos-js/main/docs/reviews/grok-public-review.md"
+  ],
+  "rawFilesMatch": 11,
+  "cloneChecks": [
+    {
+      "command": "npm run examples",
+      "exitCode": 0,
+      "result": "6/6 examples passed; 24 checks."
+    },
+    {
+      "command": "npm run examples -- ed25519",
+      "exitCode": 0,
+      "result": "1/1 examples passed; 4 checks."
+    },
+    {
+      "command": "npm run examples -- combined",
+      "exitCode": 0,
+      "result": "1/1 examples passed; 7 checks."
+    }
+  ],
+  "verifiedCommit": "c78b0f53ebd42e7a48ec40fa28c0605cb551908a",
+  "temporaryCloneRemoved": true,
+  "date": "2026-10-28",
+  "visibility": "PUBLIC",
+  "defaultBranch": "main",
+  "githubDetectedLicense": "MIT",
+  "localAndRemoteMainMatchedAtVerification": true
+}

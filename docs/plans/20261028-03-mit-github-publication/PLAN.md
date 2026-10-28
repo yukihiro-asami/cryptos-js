@@ -2,7 +2,7 @@
 
 ## 状態・目的
 
-実行中。2026-10-28、ユーザーの「PLANを承認します。実行して、GitHub公開まで進めてください」により、MITの反映・コミット・GitHub公開まで承認された。中断後の「続けて」を受け、起草時の状態から実行を開始した。
+完了。MITの反映、GitHub公開、公開先からの取得・利用例の実行確認を終えた。公開URLと成果commitは末尾を参照。2026-10-28、ユーザーの「PLANを承認します。実行して、GitHub公開まで進めてください」と、中断後の「続けて」に基づいて実行した。
 
 cryptos-jsを浅見幸宏のGitHubアカウントで公開する。5方式の手書き参照実装、日英の解説、利用例、検証・レビュー対応記録を、技術を理解し自ら実装できることを伝える成果として整える。
 
@@ -82,3 +82,22 @@ cryptos-jsを浅見幸宏のGitHubアカウントで公開する。5方式の手
 [ローカル検証記録](checks/local-verification.json)を保存した。暗号コード・試験・利用例は変更せず、既存の回帰・相互運用・ブラウザ・100万回試験の成功結果を引き継ぐ。
 
 公開準備の成果commitは本節を含む`Prepare MIT-licensed GitHub publication`（親：`66da03cd6b6d8480db5c575e58dccd7376178ee9`）。GitHub公開と公開後の確認を続ける。
+
+
+## 公開結果・完了記録（2026-10-28）
+
+公開先：[yukihiro-asami/cryptos-js](https://github.com/yukihiro-asami/cryptos-js)。visibilityはPUBLIC、既定branchはmain、GitHubによるライセンス判定はMITである。
+
+公開準備commit：`c78b0f53ebd42e7a48ec40fa28c0605cb551908a`（`Prepare MIT-licensed GitHub publication`）。新しい公開リポジトリを作成し、originを設定して既存4commitとともにpushした。ローカルと公開先のmainが同じcommitであることを確認した。
+
+| 公開後の確認 | 結果 |
+|---|---|
+| 認証なしのHTTP取得 | リポジトリページと主要11ファイルを取得できた |
+| ファイル一致 | 日英README、LICENSE、日英の解説2組、Node・ブラウザの利用例入口、Claude対応・Grok再評価の11ファイルがローカルとバイト一致 |
+| 新規clone | 公開HTTPS URLから取得でき、HEADが公開準備commitと一致 |
+| clone先の利用例 | 全6例・24項目、Ed25519単独4項目、組み合わせ例単独7項目が成功 |
+| 片付け | clone先の作業ツリーが空であることを確認し、一時cloneを削除 |
+
+[公開後の確認記録](checks/public-verification.json)を保存した。公開内容にはコードと日英解説、利用例、出典・変更台帳、レビュー対応と検証・PLANの履歴を含む。暗号コードへの追加変更、npm公開、Webサイト配備は行っていない。
+
+本完了記録の成果commitは、本節を含む`Record GitHub publication and public verification`（親：`c78b0f53ebd42e7a48ec40fa28c0605cb551908a`）。この記録もmainへコミット・pushし、最終のcommit一致と作業ツリーを確認して終了する。後続はrainfrog-projectのMVP・MCPの実現可能性検討へ戻る。
