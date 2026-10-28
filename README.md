@@ -31,6 +31,49 @@
 
 暗号処理はJavaScriptのES modulesとして実装し、WebCryptoや外部暗号パッケージへの委譲はしていません。既存の低水準APIを維持しており、seed・鍵・nonce・入出力バッファは呼び出し側が用意します。認証プロトコル、アプリ、サーバーは含みません。既存のCryptoJSとは別のプロジェクトです。
 
+## 動かして読む
+
+Node.js 24以降。インストール・ビルドは不要です。リポジトリのルートで実行します。
+
+```sh
+npm run examples
+npm run examples -- ed25519
+npm run examples -- combined
+```
+
+引数なしで全6例を実行し、成功すると `6/6 examples passed; 24 checks.` と表示します。不一致や実行エラーは終了コード1になります。個別のIDは `ed25519`、`x25519`、`sha512`、`hkdf`、`chacha`、`combined` です。
+
+ブラウザ用の確認ページは次で起動します。
+
+```sh
+npm run examples:browser
+```
+
+[http://127.0.0.1:3210/](http://127.0.0.1:3210/)を開き、「すべて実行」を押します。各例の入出力を展開し、呼び出しコードも読めます。ポートを変える場合は `npm run examples:browser -- 3211`、停止はCtrl+Cです。HTMLを直接開かず、ローカルサーバー経由で使います。
+
+| 利用例 | 確かめること |
+|---|---|
+| [Ed25519](examples/ed25519.js) | 鍵生成・署名のRFC値との一致、検証、メッセージ改変の拒否 |
+| [X25519](examples/x25519.js) | 公開鍵・共有秘密のRFC値との一致、双方の計算結果の一致 |
+| [SHA-512](examples/sha512.js) | abcのハッシュと期待値の一致 |
+| [HKDF-SHA-512](examples/hkdf-sha512.js) | Extract・Expandと独立に計算したSHA-512期待値の一致 |
+| [ChaCha20-Poly1305](examples/chacha20-poly1305.js) | 暗号文・タグのRFC値との一致、復号、タグ改変の拒否 |
+| [鍵共有 → 鍵導出 → 暗号化](examples/key-exchange-encryption.js) | 新しいデモ鍵を生成し、相手側で同じ鍵を導出してUTF-8の文を復号 |
+
+Node.jsとブラウザは同じ利用例とライブラリを読みます。固定の例は[公開テスト値](examples/vectors.js)を使用します。HKDFはRFC 5869 A.1の入力をSHA-512に適用し、期待値をNode.jsとPythonで別途計算したもので、RFC掲載のSHA-256出力とは異なります。固定鍵は実データに使用しません。
+
+組み合わせの例は毎回新しい鍵・salt・nonceを生成し、乱数の生成だけ実行環境の機能を使います。暗号計算は独自ライブラリで実行します。この例はローカルでの部品の接続を示すもので、認証付き鍵交換プロトコルではありません。ブラウザでの計算はタブ内で完結し、入力を送信・保存しません。
+
+2026-10-28、macOS 26.3.1 (a) / arm64で確認しました。
+
+| 実行環境 | 結果 |
+|---|---|
+| Node.js 24.22.1 | 6例・24項目成功 |
+| Safari 26.3.1 (21623.2.7.111.2) | 6例・24項目成功。実際のSafariで確認 |
+| Chrome 156.0.8078.49 | 6例・24項目成功。実際のChromeで確認 |
+
+両ブラウザで入出力の展開、再実行、配信停止時のエラー表示、再読込後の復帰を確認しました。[工程と確認記録](docs/plans/20261028-02-examples-browser-validation/PLAN.md)に範囲を残しています。
+
 ## 検証する
 
 Node.js 24以降。依存パッケージのインストールやビルドは不要です。
@@ -58,4 +101,4 @@ npm test
 
 元資産はrainfrog_truthのfrog/workerです。[出典台帳](docs/source-manifest.json)に元パス・commit・ハッシュ、[変更台帳](docs/source-changes.json)に取り込み後の修正理由とハッシュを残しています。[Grokの諮問原文と修正点](docs/reviews/grok-reduction.md)も保存しています。
 
-現在はGitHub公開の準備段階です。Node.jsでの検証と日英の解説を整備しており、独立した利用例・ブラウザ検証・ライセンス決定は後続工程です。ライセンスは未選定で、npm公開は無効にしています。
+現在はGitHub公開の準備段階です。Node.jsでの検証、日英の解説、独立した利用例、Safari・Chromeでの確認を終えています。ライセンス等の公開条件の整備とGitHub公開が後続工程です。ライセンスは未選定で、npm公開は無効にしています。

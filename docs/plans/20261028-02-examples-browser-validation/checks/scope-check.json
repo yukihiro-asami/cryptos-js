@@ -1,0 +1,15 @@
+{
+  "baselineTrackedFiles": 377,
+  "changedExistingFiles": [
+    "README.en.md",
+    "README.md",
+    "docs/algorithms.en.md",
+    "docs/algorithms.md",
+    "package.json"
+  ],
+  "unchangedExistingFiles": 372,
+  "newJavaScriptSyntaxChecks": 12,
+  "documentLocalLinksChecked": 166,
+  "unknownExampleExitCode": 1,
+  "invalidPortExitCode": 1
+}

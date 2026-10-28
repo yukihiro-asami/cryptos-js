@@ -13,6 +13,8 @@
     "test:reference": "node scripts/run-reference-tests.mjs",
     "test:interop": "node --test tests/interop.test.mjs",
     "test": "npm run check:imports && npm run test:reference && npm run test:regression && npm run test:interop",
-    "test:regression": "node --test tests/point-decoding.test.mjs tests/signature-scalar.test.mjs tests/ed25519-arithmetic.test.mjs"
+    "test:regression": "node --test tests/point-decoding.test.mjs tests/signature-scalar.test.mjs tests/ed25519-arithmetic.test.mjs",
+    "examples": "node examples/node.mjs",
+    "examples:browser": "node scripts/serve-examples.mjs"
   }
 }

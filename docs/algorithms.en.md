@@ -327,4 +327,4 @@ The current results are 201 existing tests, 11 regression groups, and five algor
 
 The implementation demonstrates small functions that expose mathematical structure, choices of coordinates and integer representations, and established arithmetic adapted to BigInt. JavaScript BigInt does not guarantee constant-time execution, so this reference implementation does not guarantee side-channel resistance. Agreement with independent implementations on tested inputs, specification checks, and implementation choices are reported separately.
 
-The [interoperability tests](../tests/interop.test.mjs) currently show how the functions are called. Standalone usage examples and browser validation are subsequent work.
+The [examples and instructions](../README.en.md#run-and-read) run all five primitives and their composition in Node.js and the browser. Inspect inputs, outputs, comparisons against expected values, and rejection of modified messages or tags. The [interoperability tests](../tests/interop.test.mjs) retain the more detailed comparisons with Node.js cryptography.

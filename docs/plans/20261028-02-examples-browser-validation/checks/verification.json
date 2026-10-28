@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-28",
+  "recording": "Summary of command outputs and observed browser UI; not an automated cross-browser test runner.",
+  "os": "macOS 26.3.1 (a), 25D771280a, arm64",
+  "node": "24.22.1",
+  "nodeExamples": {
+    "examplesPassed": 6,
+    "assertionsPassed": 24,
+    "individualEd25519": 4,
+    "individualCombined": 7
+  },
+  "checkImports": {
+    "filesVerified": 324,
+    "originalMatches": 311,
+    "recordedChanges": 13,
+    "localImportsResolved": 881
+  },
+  "regression": {
+    "passed": 11,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "interop": {
+    "passed": 5,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "independentFixtures": {
+    "nodeAssertions": 10,
+    "pythonAssertions": 3
+  },
+  "browsers": [
+    {
+      "name": "Safari",
+      "version": "26.3.1 (21623.2.7.111.2)",
+      "method": "Installed Safari, native UI interaction and accessibility observations",
+      "examplesPassed": 6,
+      "assertionsPassed": 24,
+      "inputOutputExpanded": true,
+      "combinedRerunPassed": true,
+      "serverStoppedShowsFailure": true,
+      "reloadAfterServerRestartRecovers": true
+    },
+    {
+      "name": "Chrome",
+      "version": "156.0.8078.49",
+      "method": "Installed Chrome, browser UI interaction and DOM observations",
+      "examplesPassed": 6,
+      "assertionsPassed": 24,
+      "inputOutputExpanded": true,
+      "fullRerunPassed": true,
+      "combinedRerunPassed": true,
+      "rerunPublicKeyChanged": true,
+      "serverStoppedShowsFailure": true,
+      "reloadAfterServerRestartRecovers": true
+    }
+  ],
+  "libraryChanged": false,
+  "fullReferenceSweepRepeated": false,
+  "committed": false,
+  "published": false
+}

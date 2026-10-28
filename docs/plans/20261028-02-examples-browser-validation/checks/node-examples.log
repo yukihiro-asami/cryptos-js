@@ -1,0 +1,122 @@
+
+> cryptos-js@0.0.0 examples
+> node examples/node.mjs
+
+
+PASS Ed25519 — RFC 8032 §7.1, TEST 2
+{
+  "checks": [
+    "Public key matches RFC 8032",
+    "Signature matches RFC 8032",
+    "Original message accepted",
+    "Changed message rejected"
+  ],
+  "input": {
+    "seed": "4ccd089b28ff96da9db6c346ec114e0f5b8a319f35aba624da8cf6ed4fb8a6fb",
+    "message": "72"
+  },
+  "output": {
+    "publicKey": "3d4017c3e843895a92b70aa74d1b7ebc9c982ccf2ec4968cc0cd55f12af4660c",
+    "signature": "92a009a9f0d4cab8720e820b5f642540a2b27b5416503f8fb3762223ebdb69da085ac1e43e15996e458f3613d0f11d8c387b2eaeb4302aeeb00d291612bb0c00"
+  }
+}
+
+PASS X25519 — RFC 7748 §6.1
+{
+  "checks": [
+    "Alice public key matches RFC 7748",
+    "Bob public key matches RFC 7748",
+    "Shared secret matches RFC 7748",
+    "Both parties obtain the same shared secret"
+  ],
+  "input": {
+    "alicePrivate": "77076d0a7318a57d3c16c17251b26645df4c2f87ebc0992ab177fba51db92c2a",
+    "bobPrivate": "5dab087e624a8a4b79e17f8b83800ee66f3bb1292618b6fd1c2f8b27ff88e0eb"
+  },
+  "output": {
+    "alicePublic": "8520f0098930a754748b7ddcb43ef75a0dbf3a0d26381af4eba4a98eaa9b4e6a",
+    "bobPublic": "de9edb7d7b7dc1b4d35b61c2ece435373f8343c85b78674dadfc7e146f882b4f",
+    "shared": "4a5d9d5ba4ce2de1728e3bf480350f25e07e21c947d19e3376f09b3c1e161742"
+  }
+}
+
+PASS SHA-512 — abc · independently checked with Node & Python
+{
+  "checks": [
+    "SHA-512 abc digest matches"
+  ],
+  "input": {
+    "utf8": "abc"
+  },
+  "output": {
+    "digest": "ddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f"
+  }
+}
+
+PASS HKDF-SHA-512 — RFC 5869 A.1 inputs, adapted to SHA-512; Node & Python outputs
+{
+  "checks": [
+    "Extract matches independent SHA-512 expectation",
+    "Expand matches independent SHA-512 expectation"
+  ],
+  "input": {
+    "ikm": "0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b",
+    "salt": "000102030405060708090a0b0c",
+    "info": "f0f1f2f3f4f5f6f7f8f9",
+    "outputBytes": 42
+  },
+  "output": {
+    "prk": "665799823737ded04a88e47e54a5890bb2c3d247c7a4254a8e61350723590a26c36238127d8661b88cf80ef802d57e2f7cebcf1e00e083848be19929c61b4237",
+    "derived": "832390086cda71fb47625bb5ceb168e4c8e26a1a16ed34d9fc7fe92c1481579338da362cb8d9f925d7cb"
+  }
+}
+
+PASS ChaCha20-Poly1305 — RFC 8439 §2.8.2
+{
+  "checks": [
+    "Encryption succeeded",
+    "Ciphertext and tag match RFC 8439",
+    "Authentic ciphertext accepted",
+    "Plaintext recovered",
+    "Changed tag rejected",
+    "Rejected input leaves output untouched"
+  ],
+  "input": {
+    "key": "808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9f",
+    "nonce": "070000004041424344454647",
+    "aad": "50515253c0c1c2c3c4c5c6c7",
+    "plaintext": "4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e"
+  },
+  "output": {
+    "ciphertext": "d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b6116",
+    "tag": "1ae10b594f09e26a7e902ecbd0600691"
+  }
+}
+
+PASS X25519 → HKDF → ChaCha20-Poly1305 — Fresh demo keys · one local exchange, no network protocol
+{
+  "checks": [
+    "Shared secret is nonzero",
+    "X25519 shared secrets agree",
+    "HKDF derives the same 32-byte encryption key",
+    "Alice encrypted with the derived key",
+    "Bob decrypted with his independently derived key",
+    "UTF-8 message recovered",
+    "Changed tag rejected with the derived key"
+  ],
+  "input": {
+    "utf8": "Hello from cryptos-js / こんにちは",
+    "salt": "d6c9802c27d4669cfe50017a1bdce2df845f820e956ea6b3348ec6efd057f505",
+    "info": "63727970746f732d6a73206578616d706c65207631da39b5179d88936e8cbd3705bbdac0889c5a1a74f96d23fb4d7dff110112ae250e4388cb6f26873e1fc8412fce2ee80f05639dff884b6d6cef4a4a4ade26af2a",
+    "nonce": "85caed4dff197c6dfa439199",
+    "aad": "64656d6f2d6d6573736167653a31"
+  },
+  "output": {
+    "alicePublic": "da39b5179d88936e8cbd3705bbdac0889c5a1a74f96d23fb4d7dff110112ae25",
+    "bobPublic": "0e4388cb6f26873e1fc8412fce2ee80f05639dff884b6d6cef4a4a4ade26af2a",
+    "ciphertextAndTag": "cbc69e180ae5cbf4b992b7fd72cf842bc3808336fe0cd7e831b514b47f3838a6290ab47877894daf7956679a86c0468a1e4160dd11244e",
+    "recovered": "Hello from cryptos-js / こんにちは"
+  }
+}
+
+6/6 examples passed; 24 checks.

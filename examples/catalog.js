@@ -1,0 +1,20 @@
+// Explicit loaders keep Node and browser on the same examples.
+export const examples = [
+  { id: 'ed25519', title: 'Ed25519', subtitle: '鍵生成 → 署名 → 検証 / Sign & verify',
+    source: 'ed25519.js', basis: 'RFC 8032 §7.1, TEST 2', load: () => import('./ed25519.js') },
+  { id: 'x25519', title: 'X25519', subtitle: '双方で共有秘密を計算 / Shared secret',
+    source: 'x25519.js', basis: 'RFC 7748 §6.1', load: () => import('./x25519.js') },
+  { id: 'sha512', title: 'SHA-512', subtitle: 'abc → 64バイトのハッシュ / Digest',
+    source: 'sha512.js', basis: 'abc · independently checked with Node & Python',
+    load: () => import('./sha512.js') },
+  { id: 'hkdf', title: 'HKDF-SHA-512', subtitle: 'Extract → Expand / 鍵導出',
+    source: 'hkdf-sha512.js', basis: 'RFC 5869 A.1 inputs, adapted to SHA-512; Node & Python outputs',
+    load: () => import('./hkdf-sha512.js') },
+  { id: 'chacha', title: 'ChaCha20-Poly1305', subtitle: '暗号化 → 検証 → 復号 / Encrypt & decrypt',
+    source: 'chacha20-poly1305.js', basis: 'RFC 8439 §2.8.2',
+    load: () => import('./chacha20-poly1305.js') },
+  { id: 'combined', title: 'X25519 → HKDF → ChaCha20-Poly1305',
+    subtitle: '組み合わせて使う / Compose the primitives', source: 'key-exchange-encryption.js',
+    basis: 'Fresh demo keys · one local exchange, no network protocol',
+    load: () => import('./key-exchange-encryption.js') },
+];

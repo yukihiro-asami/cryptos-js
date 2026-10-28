@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cryptos-js — 実行できる参照実装 / Runnable examples</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/examples/browser/style.css">
+  <script type="module" src="/examples/browser/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">cryptos<span>-js</span></a>
+    <nav aria-label="資料 / Documentation">
+      <a href="/docs/algorithms.md">解説 / 日本語</a>
+      <a href="/docs/algorithms.en.md">Guide / English</a>
+      <a href="/examples/vectors.js?source">Test vectors</a>
+    </nav>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">HANDWRITTEN JAVASCRIPT · REFERENCE IMPLEMENTATIONS</p>
+      <h1>計算を動かす。<br><span>仕組みを読む。</span></h1>
+      <p class="lead">5つの暗号方式と、その組み合わせ。<br>ボタンから実装を動かし、期待値との一致や改変の拒否を確かめます。</p>
+      <p class="english" lang="en">Run five cryptographic primitives, inspect the results, and follow the code.</p>
+    </section>
+    <aside class="note">
+      固定の例は公開テスト値です。組み合わせの例は毎回新しいデモ鍵を生成します。<br>
+      <span lang="en">Fixed examples use public test data. The composition generates fresh demo keys.</span>
+      <p>計算はこのブラウザ内で実行し、入力を送信・保存しません。<span lang="en">Computation stays in this tab; inputs are not sent or saved.</span></p>
+    </aside>
+    <section class="run-bar" aria-label="実行状況 / Run status">
+      <div>
+        <h2>利用例 <span>/ Examples</span></h2>
+        <p id="summary" role="status" aria-live="polite">準備中 / Loading…</p>
+      </div>
+      <button id="run-all" class="primary" disabled>すべて実行 / Run all</button>
+    </section>
+    <p id="page-error" class="error" role="alert" hidden></p>
+    <div id="examples"></div>
+    <noscript>このページの計算にはJavaScriptが必要です。JavaScript is required to run the examples.</noscript>
+  </main>
+  <footer>
+    <p>Vanilla JavaScript · BigInt · ES modules · No build step</p>
+    <p>参照実装。定時間性・サイドチャネル耐性は保証しません。<br>
+      <span lang="en">Reference implementations; constant-time execution and side-channel resistance are not guaranteed.</span></p>
+    <p id="environment"></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/examples/browser/main.js",
+    "status": 200,
+    "type": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "/examples/ed25519.js?source",
+    "status": 200,
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "/src/crypto/sha512/sha512.js",
+    "status": 200,
+    "type": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "/docs/algorithms.en.md",
+    "status": 200,
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "/.git/config",
+    "status": 404,
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "/package.json",
+    "status": 404,
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "/src/%2e%2e/package.json",
+    "status": 404,
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "/examples/missing.js",
+    "status": 404,
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "/%ZZ",
+    "status": 400,
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "method": "HEAD",
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "status": 405
+  },
+  {
+    "host": "unexpected.example",
+    "status": 403
+  }
+]
