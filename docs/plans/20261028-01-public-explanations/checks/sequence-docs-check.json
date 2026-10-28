@@ -1,0 +1,28 @@
+{
+  "documents": 6,
+  "localLinks": 172,
+  "exactCodeQuotes": 6,
+  "bilingualEquationsAndSources": "matched",
+  "externalSources": [
+    "https://eprint.iacr.org/2008/522",
+    "https://eprint.iacr.org/2011/368",
+    "https://eprint.iacr.org/2017/437",
+    "https://eprint.iacr.org/2018/985",
+    "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
+    "https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-bigint-signedRightShift",
+    "https://www.rfc-editor.org/rfc/rfc5869.html#section-2",
+    "https://www.rfc-editor.org/rfc/rfc7748.html#section-4.1",
+    "https://www.rfc-editor.org/rfc/rfc7748.html#section-5",
+    "https://www.rfc-editor.org/rfc/rfc8032.html#section-5.1",
+    "https://www.rfc-editor.org/rfc/rfc8032.html#section-5.1.4",
+    "https://www.rfc-editor.org/rfc/rfc8032.html#section-5.1.7",
+    "https://www.rfc-editor.org/rfc/rfc8235.html#section-2",
+    "https://www.rfc-editor.org/rfc/rfc8439.html#section-2.8"
+  ],
+  "changeScope": "within approved paths",
+  "markdownTables": 18,
+  "tableRows": 122,
+  "chapterOrder": "X25519 -> Schnorr -> Ed25519",
+  "explanatorySignatureScalars": "h and s",
+  "checksPassed": true
+}

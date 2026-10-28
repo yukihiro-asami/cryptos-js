@@ -1,0 +1,5 @@
+
+> cryptos-js@0.0.0 check:imports
+> node scripts/check-imports.mjs
+
+{"filesVerified":324,"originalMatches":315,"recordedChanges":9,"localImportsResolved":881}

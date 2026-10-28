@@ -1,52 +1,61 @@
 # cryptos-js
 
-Handwritten JavaScript cryptographic reference implementations by Yukihiro Asami.
+[English](README.en.md)
 
-Ed25519、X25519、SHA-512、HKDF-SHA-512、ChaCha20-Poly1305を、バニラJavaScriptでスクラッチから実装した参照実装集です。アルゴリズムの数学的な定義と実際の計算手順を結び付け、自ら実装・検証できることをコードと説明で示します。
+**暗号アルゴリズムを、数式からバニラJavaScriptの実装まで。**
 
-BigIntを用いた有限体演算や、既知の計算手法を実装へ落とし込む判断を解説することを目指しています。JavaScriptのBigInt演算は定時間性を保証しないため、本実装もサイドチャネル攻撃耐性を保証しません。既存のCryptoJSとは別のプロジェクトです。
+浅見幸宏による、Ed25519・X25519・SHA-512・HKDF-SHA-512・ChaCha20-Poly1305の参照実装集です。スクラッチから書いた計算処理と解説を通じて、アルゴリズムを理解し、自ら実装・検証する技術を示します。
 
-## 現在地
+有限体演算はBigIntで直接表現し、既知の還元手法を中間値の大きさに合わせて配置しています。署名では座標変換と事前計算表を使い、SHA-512では64ビット語をBigInt、ChaCha20では32ビット語をNumberと型付き配列で扱います。それぞれの選択をコードに結び付けて説明しています。
 
-公開準備中です。選択取り込み後、点の復元処理2ファイルの入力検査と既存テスト6ファイルを修正しました。既存201件（100万回の逆数試験を含む）、追加した境界条件の4試験群、Node.js標準実装との5方式の比較がすべて成功しています。原本のハッシュと取り込み後の変更を別々に記録しています。認証プロトコル・アプリ・サーバーは含みません。ライセンスは未選定で、npm公開は無効にしています。
+## 読み始める
 
-## 構成
-
-| 方式 | 入口（src/以下） |
+| 知りたいこと | 文書 |
 |---|---|
-| Ed25519 | curve25519/ed25519/key-pair.js、sign-detached.js、verify-detached.js |
-| X25519 | curve25519/x25519/scalarmult-curve25519.js、scalarmult-curve25519-base.js |
-| SHA-512 | crypto/sha512/sha512.js |
-| HKDF-SHA-512 | crypto/sha512/hkdf-sha512-extract.js、hkdf-sha512-expand.js |
-| ChaCha20-Poly1305 | crypto/chacha20poly1305/chacha20poly1305-encrypt.js、chacha20poly1305-decrypt.js |
+| X25519 → シュノア署名 → Ed25519、有限体・部分群から内部計算まで | [数式からコードへ](docs/algorithms.md) |
+| BigIntの折りたたみ、二乗前の部分還元、正規化の配置 | [BigIntの有限体演算](docs/bigint-field-arithmetic.md) |
+| どの入力をどう比較し、何を確認したか | [取り込み・検証記録](docs/import-report.md)、[最新工程の記録](docs/plans/20261028-01-public-explanations/PLAN.md) |
+| 関数の呼び方と独立実装との比較 | [相互運用試験](tests/interop.test.mjs) |
 
-元の低水準APIを維持しています。使い方は[独立実装との比較試験](tests/interop.test.mjs)で確認できます。ブラウザ用のビルドや依存パッケージは不要なES modulesです。現在の実行検証はNode.jsで行っています。
+解説は日本語・英語を用意しています。各文書から対応するコードと一次資料へ移動できます。
 
-## 検証
+## 対象と入口
 
-Node.js 24以降。npm installは不要です。
+| 方式 | 実装 |
+|---|---|
+| Ed25519 | [鍵生成](src/curve25519/ed25519/key-pair.js)・[署名](src/curve25519/ed25519/sign-detached.js)・[検証](src/curve25519/ed25519/verify-detached.js) |
+| X25519 | [スカラー倍](src/curve25519/x25519/scalarmult-curve25519.js)・[基点のスカラー倍](src/curve25519/x25519/scalarmult-curve25519-base.js) |
+| SHA-512 | [ハッシュ](src/crypto/sha512/sha512.js) |
+| HKDF-SHA-512 | [Extract](src/crypto/sha512/hkdf-sha512-extract.js)・[Expand](src/crypto/sha512/hkdf-sha512-expand.js) |
+| ChaCha20-Poly1305 | [暗号化](src/crypto/chacha20poly1305/chacha20poly1305-encrypt.js)・[復号](src/crypto/chacha20poly1305/chacha20poly1305-decrypt.js) |
+
+暗号処理はJavaScriptのES modulesとして実装し、WebCryptoや外部暗号パッケージへの委譲はしていません。既存の低水準APIを維持しており、seed・鍵・nonce・入出力バッファは呼び出し側が用意します。認証プロトコル、アプリ、サーバーは含みません。既存のCryptoJSとは別のプロジェクトです。
+
+## 検証する
+
+Node.js 24以降。依存パッケージのインストールやビルドは不要です。
 
 ```sh
 npm test
 ```
 
-`npm test`は以下を順番に実行します。2026-10-28の確認ではすべて成功しました。100万回の逆数試験は約42秒、既存201件全体は約51秒でした（Node.js v24.22.1 / macOS arm64）。所要時間は環境により変わります。
+2026-10-28、Node.js v24.22.1 / macOS arm64で、次のすべてが成功しました。
 
-- `npm run check:imports`：未変更ファイルは原本、修正ファイルは変更台帳のハッシュと照合し、ローカル依存を確認。
-- `npm run test:reference`：選択した既存テストを別プロセスで実行。console.assertの失敗も検出。
-- `npm run test:regression`：点の復元の正常・異常な境界条件と署名検証経路を確認。
-- `npm run test:interop`：Node.js標準暗号実装との比較。
+| 確認 | 結果 |
+|---|---|
+| 選択した既存テスト | 201/201件成功。有限体の逆数を調べる100万回試験を含む |
+| 追加回帰試験 | 6/6試験群成功。点の復元4群、署名sの範囲検査2群 |
+| Node.js標準暗号との比較 | 5/5試験群成功。公開鍵・署名・共有秘密・ハッシュ・導出値・暗号文とタグ等を照合 |
+| 原本・変更台帳と依存関係 | 324ファイルのハッシュとローカルimport参照を確認 |
 
-既存テストの時間上限は通常1ファイル15秒、100万回試験だけ600秒です。`npm run test:reference -- --timeout-ms=600000`で全件共通の上限を指定できます。時間切れは失敗として扱います。
+個別には`npm run check:imports`、`npm run test:reference`、`npm run test:regression`、`npm run test:interop`で実行できます。既存テストの時間上限は通常1ファイル15秒、100万回試験は600秒です。`npm run test:reference -- --timeout-ms=600000`で全件共通の上限を指定できます。時間切れは失敗になります。所要時間は環境によりますが、直前の工程では100万回試験が約42秒でした。
 
-結果と未確認範囲は[取り込み記録](docs/import-report.md)を参照してください。既存テストには形状確認だけのものもあり、実行件数をアルゴリズムの網羅率とみなしません。
+既存試験には形状確認だけのものもあり、件数はアルゴリズムの網羅率を表しません。試験した入力と結果は、上記の検証記録から確認できます。
 
-## 出典と説明の方針
+## 参照実装としての位置付け
 
-元資産はrainfrog_truthのfrog/workerです。選択したファイルのパス・commit・SHA-256は[台帳](docs/source-manifest.json)に記録しています。取り込み後の修正は[変更台帳](docs/source-changes.json)で元ハッシュ・修正後ハッシュ・理由を追跡します。標準的な計算手法と実装上の選択を区別し、先行研究との対応を示します。
+数学的な定義、先行手法、BigIntに合わせた実装上の工夫を区別して示します。JavaScriptのBigIntは定時間性を保証しないため、本実装もサイドチャネル攻撃耐性を保証しません。計算手順を読み、検証し、議論するための参照実装です。
 
-[BigIntで表現する有限体演算：折りたたみと正規化](docs/bigint-field-arithmetic.md)では、pseudo-Mersenne reduction、二乗前の部分還元、完全な正規化を遅らせる戦略を、実際のコードと数学的な根拠に沿って説明しています。[Grokの諮問結果と修正点](docs/reviews/grok-reduction.md)も保存しています。
+元資産はrainfrog_truthのfrog/workerです。[出典台帳](docs/source-manifest.json)に元パス・commit・ハッシュ、[変更台帳](docs/source-changes.json)に取り込み後の修正理由とハッシュを残しています。[Grokの諮問原文と修正点](docs/reviews/grok-reduction.md)も保存しています。
 
-シュノア署名、座標表現、他の方式の計算手順などの解説は今後追加します。
-
-作業範囲と結果は[取り込みPLAN](docs/plans/20261027-00-selective-import/PLAN.md)、[解説反映PLAN](docs/plans/20261027-01-reduction-explanation/PLAN.md)、[既存テスト修正PLAN](docs/plans/20261028-00-resolve-reference-tests/PLAN.md)を参照してください。
+現在はGitHub公開の準備段階です。Node.jsでの検証と日英の解説を整備しており、独立した利用例・ブラウザ検証・ライセンス決定は後続工程です。ライセンスは未選定で、npm公開は無効にしています。

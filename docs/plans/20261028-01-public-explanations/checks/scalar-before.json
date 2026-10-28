@@ -1,0 +1,24 @@
+{
+  "source": "RFC 8032 section 7.1 test 1",
+  "node": "v24.22.1",
+  "cases": [
+    {
+      "addedOrderMultiples": 0,
+      "SbelowL": true,
+      "library": 0,
+      "node": true
+    },
+    {
+      "addedOrderMultiples": 1,
+      "SbelowL": false,
+      "library": -1,
+      "node": false
+    },
+    {
+      "addedOrderMultiples": 8,
+      "SbelowL": false,
+      "library": 0,
+      "node": false
+    }
+  ]
+}

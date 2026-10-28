@@ -1,0 +1,1419 @@
+{
+  "node": "v24.22.1",
+  "platform": "darwin",
+  "arch": "arm64",
+  "total": 201,
+  "passed": 201,
+  "failed": 0,
+  "durationMs": 50309.579915999995,
+  "results": [
+    {
+      "path": "tests/curve25519/BaseRadix2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 42.493583,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-2d.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.148875,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-d.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.37899999999999,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-ed25519-y.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 47.585582999999986,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-l.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 43.216959,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-minus-one.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.48325000000003,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ConstTest/test-p.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.58979099999999,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/ClampTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.72829100000001,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 46.012292,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 43.02449999999999,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 44.56437500000004,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 47.883790999999974,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/DoubleScalarmultVartimeTest/test-05.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 44.501709000000005,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/KeyPairTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 53.74191700000006,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/KeyPairTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 55.15333300000009,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 56.06966699999998,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 65.13070799999991,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 60.09050000000002,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 69.5038340000001,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-05.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 75.78662499999996,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/SignDetachedTest/test-06.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 417.2690409999999,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/SlideVartimeTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.31558300000006,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/SlideVartimeTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.63404199999991,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 58.670917000000145,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 56.82137499999999,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 54.21116600000005,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 55.082042,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-05.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 54.16399999999999,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-06.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 69.90966600000002,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ed25519/VerifyDetachedTest/test-07.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 190.11116700000002,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519AddTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.35583299999985,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CMovTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.32212500000014,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CSwapTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.93837499999972,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CSwapTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.11275000000023,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519CopyTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.87041700000009,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519FromBytesTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.83095800000001,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.695166999999856,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.24666699999989,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519InvertTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41651.59075,
+      "timeoutMs": 600000,
+      "output": "invert-progress 100000/1000000\ninvert-progress 200000/1000000\ninvert-progress 300000/1000000\ninvert-progress 400000/1000000\ninvert-progress 500000/1000000\ninvert-progress 600000/1000000\ninvert-progress 700000/1000000\ninvert-progress 800000/1000000\ninvert-progress 900000/1000000\ninvert-progress 1000000/1000000\n{\"test\":\"invert-sweep\",\"completed\":1000000,\"passed\":1000000,\"durationMs\":41601.969208}\n✅ All valid-range invert tests passed.\n"
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519IsNegativeTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 40.921416999997746,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519IsZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.178290999996534,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519MulTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.72379199999705,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519NegTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.585707999998704,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519OneTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.30845899999986,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Pow22523Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.101583999996365,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ReduceTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.058208000002196,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ReduceTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.205458000004,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Sq2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.67833300000348,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SqTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.93670800000109,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SqTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.10775000000285,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SubTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.90416600000026,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519SubTest/test-trip-round.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.48479199999565,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519Test/test-type-of.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.386749999997846,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.4384579999969,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.33441699999821,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ToBytesTest/test-round-trip.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.631333000004815,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/fe25519/Fe25519ZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.937125000004016,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/EqualTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.1697920000006,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519AddCachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.02941599999758,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519AddPrecompTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.457625000002736,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519CachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.74854100000084,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519Cmov8BaseTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 40.067375000005995,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519Cmov8Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.53370800000266,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519CmovTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.219915999994555,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41.38495900000271,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41.544624999994994,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesNegateVartimeTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 43.794457999996666,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 42.2486659999995,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 42.18504199999734,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 40.903917000003275,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519FromBytesTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 40.495083000001614,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519HasSmallOrderTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.64383399999497,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519HasSmallOrderTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.798041999994894,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519IsCanonicalTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.63141699999687,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.53504200000316,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1ToP2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.75695799999812,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P1p1ToP3Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.82387499999459,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2DblTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.64325000000099,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.82600000000093,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2ToP3Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.10533299999952,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P2ZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.60087499999645,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3AddTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41.34270899999683,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3DblTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.59137500000361,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3Mul16Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 42.803124999998545,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3NegTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.229291000003286,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ReduceTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.15558299999975,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 39.32745799999975,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.99737499999901,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3SubTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.834750000001804,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.01966600000014,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.105250000000524,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToCachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.19249999999738,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ToP2Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.939375000001746,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519P3ZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.04704199999833,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519PrecompTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.49474999999802,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519PrecompZeroTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.777084000001196,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519ScalarmultBaseTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41.66933300000528,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.84654199999932,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.24895799999649,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubCachedTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.946750000002794,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.28916699999536,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.716125000006286,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/Ge25519SubPrecompTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.481040999999095,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/ScalarToRadix16Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.98866600000474,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/ge25519/ScalarToRadix16Test/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.64195800000016,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519FromBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.54070800000045,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519IsCanonicalTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.17912500000239,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519MulAddTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.99458300000697,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519ReduceTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.986125000003085,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.00504199999705,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/sc25519/Sc25519ToBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.50604200000089,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/x25519/EdwardsToMontgomeryTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.71229199999652,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/x25519/EdwardsToMontgomeryTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.13275000000431,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.891583000004175,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.26237499999843,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/x25519/MontgomeryLadderTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.72379199999705,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/x25519/ScalarmultCurve25519Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 40.84466699999757,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/curve25519/x25519/ScalarmultCurve25519Test/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.43187500000204,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcChTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.67870799999946,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMSCHTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.81937499999913,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMajTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.38808400000562,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcMajTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.61112499999581,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.038832999998704,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.083958000002895,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcRNDrTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.12012500000128,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl0Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.43824999999924,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl0Test/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.56816600000457,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl1Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.68145899999945,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSl1Test/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.103250000000116,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu0Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.22920800000429,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu0Test/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.62879199999588,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu1Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.33375000000524,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/CalcSu1Test/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 31.75837500000489,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExpandTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 45.330457999996725,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExpandTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 45.32879099999991,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HkdfSha512ExtractTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 40.263582999999926,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.8582499999975,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41.54554199999984,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512FinishTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 42.5,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512InitTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 39.60399999999936,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512StateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.81208399999741,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/HmacSha512UpdateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.837625000000116,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512FinalTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.54645899999741,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512InitTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.737708000000566,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512PadTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 39.23383399999875,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512PadTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.06770800000231,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512StateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 31.639666000002762,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.972750000000815,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.234292000001005,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512Test/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 560.5899170000048,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.697000000000116,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.20245799999975,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512TransformTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.12999999999738,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512UpdateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.969790999995894,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Sha512UpdateTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.89545899999939,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint64Array1024BETest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.3718330000047,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint8Array128BETest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.27129199999763,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/ToUint8Array512BETest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.72420899999997,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Word64AddTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.9239579999994,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Word64RotateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.91074999999546,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Word64ShiftTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.80062500000349,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/sha512/Word64XORTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.43333300000086,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/CalcQuarterRoundTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.21283299999777,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20EncryptBytesTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.216082999999344,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 39.79504199999792,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.707916999999725,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 39.50383299999521,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptDetachedTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41.409292000003916,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41.445542000001296,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 39.36662500000239,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 40.016499999997905,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305DecryptTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 40.66504200000054,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptDetachedTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.23950000000332,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptDetachedTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 38.64620900000591,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 39.76579199999833,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20Poly1305EncryptTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 41.059667000001355,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 36.22366599999805,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.304291000000376,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 37.36120899999514,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Chacha20XorIcTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.14008399999875,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaCtxTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 31.631374999997206,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaIvSetUpTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.54491699999926,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaIvSetUpTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.88591699999961,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ChachaKeySetUpTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.4598330000008,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/CrampRTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.52020800000173,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305BlocksTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.28533299999981,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.90887500000099,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.99004099999729,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-03.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.6530830000047,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305FinishTest/test-04.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 35.187333999994735,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305InitTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 33.70524999999907,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305StateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 31.695999999996275,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Poly1305UpdateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.908792000001995,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint128LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.78466599999956,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint128LETest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 32.07895799999824,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint32LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 31.677667000003566,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array128LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 31.947667000000365,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array32LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.068249999996624,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/ToUint8Array64LETest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 34.67583400000149,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Word32RotateTest/test-01.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 31.334708000002138,
+      "timeoutMs": 15000
+    },
+    {
+      "path": "tests/crypto/chacha20poly1305/Word32RotateTest/test-02.js",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 31.901249999995343,
+      "timeoutMs": 15000
+    }
+  ]
+}

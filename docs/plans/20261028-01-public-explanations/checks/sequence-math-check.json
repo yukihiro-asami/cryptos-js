@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "fieldExamples": 2,
+  "fieldInverses": 6,
+  "basePointOrderIdentity": 1,
+  "basePointPeriodicity": 4,
+  "mixedOrderPointAndCofactor": "passed",
+  "cosetIllustration": {
+    "groupSize": 88,
+    "sets": 8,
+    "sizeEach": 11
+  },
+  "actualCurvePointCount": "from RFC 7748; not enumerated",
+  "schnorrIdentities": 1210,
+  "edwardsSignatureIdentities": 2,
+  "basePointConversion": 1,
+  "x25519BasePaths": 2,
+  "x25519Agreement": 1
+}

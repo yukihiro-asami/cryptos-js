@@ -17,20 +17,16 @@ import { ge25519P2 } from '../ge25519/ge25519-p2.js';
 import { sc25519 } from '../sc25519/sc25519.js';
 import { sc25519ToBytes } from '../sc25519/sc25519-to-bytes.js';
 import { ge25519P3Reduce } from "../ge25519/ge25519-p3-reduce.js";
-import { fe25519FromBytes } from "../fe25519/fe25519-from-bytes.js";
 
 export function verifyDetached(sig, m, pk) {
     if (sig.length !== 64 || pk.length !== 32) return -1;
 
-    // スカラーSの正当性検査
-    if ((sig[63] & 0xf0) !== 0) {
-        const S = sc25519();
-        const Sbytes = sig.subarray(32);
-        fe25519FromBytes(S, Sbytes);
-        if (!sc25519IsCanonical(S)) {
-            return -1;
-        }
+    // RFC 8032 §5.1.7: decode all 256 bits of S before checking S < L.
+    const S = sc25519();
+    for (let i = 0; i < 32; i++) {
+        S.value |= BigInt(sig[32 + i]) << BigInt(8 * i);
     }
+    if (!sc25519IsCanonical(S)) return -1;
 
     // 公開鍵pkの正当性検査
     if (ge25519IsCanonical(pk) === 0) {

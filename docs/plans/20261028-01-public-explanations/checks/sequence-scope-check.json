@@ -1,0 +1,13 @@
+{
+  "changedExistingFilesThisRevision": [
+    "README.md",
+    "README.en.md",
+    "docs/algorithms.md",
+    "docs/algorithms.en.md",
+    "docs/plans/20261028-01-public-explanations/PLAN.md",
+    "docs/plans/20261028-01-public-explanations/checks/sources.md"
+  ],
+  "unchangedImplementationTestScriptAndManifestFiles": 333,
+  "head": "13affc1c4543432c6ae8cb0e4adae7fb73f01d86",
+  "passed": true
+}

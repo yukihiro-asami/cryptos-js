@@ -1,5 +1,8 @@
 {
-  "plan": "20261028-00-resolve-reference-tests",
+  "plans": [
+    "20261028-00-resolve-reference-tests",
+    "20261028-01-public-explanations"
+  ],
   "files": [
     {
       "path": "src/curve25519/ge25519/ge25519-from-bytes-negate-vartime.js",
@@ -48,6 +51,13 @@
       "originalSha256": "28136f6fa4fac5d7d2beff827d674cfee5343b05459be906a481c231f439d7ec",
       "currentSha256": "7a214c99158aab5afd1f5d0ffe893a5c943e4ac05c435d746414f2cb72566f00",
       "reason": "Correct import and call spelling to hmacSha512Update; preserve existing vectors."
+    },
+    {
+      "path": "src/curve25519/ed25519/verify-detached.js",
+      "originalSha256": "35a8bc9e03ea2c9c77f954146cc8560d6b7ed1081a811840cd762e11d287831c",
+      "currentSha256": "04e0097170744ddc60186e72b0c6d237cc67a395700bf00879e3934242629e37",
+      "plan": "20261028-01-public-explanations",
+      "reason": "Decode all 32 scalar bytes without masking bit 255 before enforcing S < L (RFC 8032 section 5.1.7); reject S+8L alternate signature encodings."
     }
   ]
 }
